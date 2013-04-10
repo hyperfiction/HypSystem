@@ -82,7 +82,7 @@ class HypSystem{
 		* @public
 		* @return	void
 		*/
-		static public function showError_dialog(
+		static public function dialog(
 											sTitle		: String,
 											sText		: String
 											#if android	,
@@ -190,11 +190,11 @@ class HypSystem{
 			trace('_show_error_dialog ::: '+sText);
 
 			#if android
-				if( sNeg == null && sPos == null ){
-					openDialog( sText , bCancelable );
-				}else{
-					openCustomDialog( sTitle , sText , sNeg , sPos , new PopupCallBack( fPos , fNeg ) );
-				}
+				if( sNeg == null && sPos == null )
+					openDialog( sTitle , sText , bCancelable );
+				else
+					openCustomDialog( sTitle , sText , sNeg , sPos , new PopupCallBack( fPos , fNeg ));
+
 			#end
 		}
 
@@ -207,6 +207,10 @@ class HypSystem{
 		@JNI
 		static private function openCustomDialog( sTitle : String , sText : String , sPos : String , sNeg : String , cb : HaxeObject ) : Void{
 		}
+
+		//Privates
+		@JNI
+		private static function openDialog( sTitle : String , sText : String , bCancelable : Bool ) : Void{}
 
 
 	// -------o protected
@@ -301,9 +305,6 @@ class HypSystem{
 		@JNI
 		static public function lightsOut( ) : Void {}
 
-		//Privates
-		@JNI
-		private static function openDialog( s : String , bCancelable : Bool ) : Void{}
 
 	#end
 
@@ -365,12 +366,8 @@ class PopupCallBack extends HaxeObject{
 	// -------o misc
 
 }
-
 #end
 
-
-#if android
 class HaxeObject{
 
 }
-#end

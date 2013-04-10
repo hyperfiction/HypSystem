@@ -312,10 +312,10 @@ class HypSystem{
 		* @public
 		* @return	void
 		*/
-		static public void openDialog( String error_msg , boolean bCancelable , String sTitle ){
-			trace("show_error_dialog ::: "+error_msg+" - "+bCancelable);
+		static public void openDialog( String sTitle , String sText , boolean bCancelable ){
+			trace("show_error_dialog ::: "+sText+" - "+bCancelable);
 			final AlertDialog.Builder builder = new AlertDialog.Builder( GameActivity.getContext( ) , 2 );
-           						builder.setMessage( error_msg );
+           						builder.setMessage( sText );
            						if( sTitle != "" )
            							builder.setTitle( sTitle );
            						builder.setNegativeButton("OK",
