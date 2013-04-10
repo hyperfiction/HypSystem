@@ -1,0 +1,1792 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"un",
+				"untilD"
+			],
+			[
+				"HypRate",
+				"HypRate_show"
+			],
+			[
+				"M",
+				"MULTI_WAIT"
+			],
+			[
+				"Viral",
+				"ViralTrads	fr.hyperfiction.viral.utils"
+			],
+			[
+				"Trad",
+				"TradsEN"
+			],
+			[
+				"getT",
+				"getTrads_FR"
+			],
+			[
+				"Trads",
+				"TradsFR"
+			],
+			[
+				"STATE_Game",
+				"STATE_Game_Menu	var"
+			],
+			[
+				"STAT",
+				"STATE_Multiplayer	var"
+			],
+			[
+				"send",
+				"sendTiming"
+			],
+			[
+				"_i",
+				"_iTimer	var"
+			],
+			[
+				"Tr",
+				"TradsEN	class"
+			],
+			[
+				"Tra",
+				"TradsEN	class"
+			],
+			[
+				"FileS",
+				"FileSystem	class"
+			],
+			[
+				"Hyp",
+				"HypSystem"
+			],
+			[
+				"conne",
+				"connectionStatus"
+			],
+			[
+				"lo",
+				"looser_r"
+			],
+			[
+				"PLA",
+				"PLAYER_RED"
+			],
+			[
+				"BOTO",
+				"BOTTOM_RIGHT"
+			],
+			[
+				"rever",
+				"bRevert	var"
+			],
+			[
+				"Vi",
+				"ViralAssets	class"
+			],
+			[
+				"C",
+				"Convertor"
+			],
+			[
+				"Game",
+				"GameModes	class"
+			],
+			[
+				"MG",
+				"MGameMulti"
+			],
+			[
+				"p",
+				"pu	Public variable (pu)"
+			],
+			[
+				"Da",
+				"DatasMultiplayers	class"
+			],
+			[
+				"G",
+				"GameModes	class"
+			],
+			[
+				"Pion",
+				"PionTypes"
+			],
+			[
+				"pla",
+				"playerCurrent	var"
+			],
+			[
+				"pl",
+				"playerCurrent	var"
+			],
+			[
+				"TIR",
+				"TIRS_AMI"
+			],
+			[
+				"_get",
+				"_getRot	function"
+			],
+			[
+				"PL",
+				"PLAYER_RED"
+			],
+			[
+				"fro",
+				"fromRot	var"
+			],
+			[
+				"remove",
+				"remove_ghosts"
+			],
+			[
+				"idc",
+				"idCaseA4	var"
+			],
+			[
+				"_up",
+				"_updatePreview"
+			],
+			[
+				"is",
+				"is_in_game_zone"
+			],
+			[
+				"_ph",
+				"_phase1_pouvoir	function"
+			],
+			[
+				"Plat",
+				"PlateauMem"
+			],
+			[
+				"PLay",
+				"PLAYER_RED"
+			],
+			[
+				"dir",
+				"direction_opp	var"
+			],
+			[
+				"_it",
+				"_tirAvec_rotation"
+			],
+			[
+				"_pha",
+				"_phase2_tir_amis	function"
+			],
+			[
+				"TIRS",
+				"TIRS_ENNEMI"
+			],
+			[
+				"TIR_",
+				"TIRS_AMI"
+			],
+			[
+				"TOUR_j",
+				"TOUR_J2"
+			],
+			[
+				"_tir",
+				"_tirAvec_rotation"
+			],
+			[
+				"Dir",
+				"DirectionsUtil"
+			],
+			[
+				"_a",
+				"_aPions_to_testR	var"
+			],
+			[
+				"deri",
+				"dernier_coup	var"
+			],
+			[
+				"TOURN",
+				"TOURNE_L"
+			],
+			[
+				"dernier",
+				"dernier_coup	var"
+			],
+			[
+				"derni",
+				"dernier_coup	var"
+			],
+			[
+				"Case",
+				"CasesUtil"
+			],
+			[
+				"dernie",
+				"dernier_coup"
+			],
+			[
+				"Obje",
+				"ObjectPool"
+			],
+			[
+				"O",
+				"ObjectPool	class"
+			],
+			[
+				"pro",
+				"pRot2	var"
+			],
+			[
+				"pTy",
+				"pType2	var"
+			],
+			[
+				"pP",
+				"pPlayer2	var"
+			],
+			[
+				"pT",
+				"pType2	var"
+			],
+			[
+				"pR",
+				"pRot2	var"
+			],
+			[
+				"joueu",
+				"joueur_opp"
+			],
+			[
+				"Cas",
+				"CasesUtil"
+			],
+			[
+				"Pla",
+				"PlateauMem"
+			],
+			[
+				"Dat",
+				"DatasPlateau	class"
+			],
+			[
+				"_ac",
+				"_aCases_ouvertes	var"
+			],
+			[
+				"id",
+				"idCase	var"
+			],
+			[
+				"idC",
+				"idCase2	var"
+			],
+			[
+				"idCa",
+				"idCase1	var"
+			],
+			[
+				"getP",
+				"getPlayer_at"
+			],
+			[
+				"joue",
+				"joueur_opp	var"
+			],
+			[
+				"plateau",
+				"plateau_courant	var"
+			],
+			[
+				"PLAYER",
+				"PLAYER_BLUE"
+			],
+			[
+				"get",
+				"getGraph(...)	MemoryGraph"
+			],
+			[
+				"_gr",
+				"_graphB	var"
+			],
+			[
+				"Byte",
+				"BytesMemory	class"
+			],
+			[
+				"MEm",
+				"MemoryGraph	class"
+			],
+			[
+				"Memo",
+				"MemoryGraph	class"
+			],
+			[
+				"INDE",
+				"INDEX_SIMPLE	var"
+			],
+			[
+				"DatasP",
+				"DatasPlateau"
+			],
+			[
+				"Pi",
+				"PionTypes	class"
+			],
+			[
+				"DatasPlateau",
+				"DatasPlateau2	class"
+			],
+			[
+				"P",
+				"PionTypes	class"
+			],
+			[
+				"B",
+				"ByteArray	class"
+			],
+			[
+				"Mem",
+				"MemoryGraph	class"
+			],
+			[
+				"graph",
+				"graph_joueur	var"
+			],
+			[
+				"iA",
+				"iAgressifP2	var"
+			],
+			[
+				"iSi",
+				"iSimpleP2	var"
+			],
+			[
+				"iSimple",
+				"iSimpleP1"
+			],
+			[
+				"get_c",
+				"get_count_of"
+			],
+			[
+				"fD",
+				"fDistance"
+			],
+			[
+				"_ah",
+				"_aHeat"
+			],
+			[
+				"idR",
+				"idRootPlyr"
+			],
+			[
+				"idRo",
+				"idRootOpp"
+			],
+			[
+				"cur",
+				"current_player_opp"
+			],
+			[
+				"bP",
+				"bPlayer"
+			],
+			[
+				"rooti",
+				"rootIdRot	var"
+			],
+			[
+				"rootid",
+				"rootIdType"
+			],
+			[
+				"PRE",
+				"PREMIER_TOUR_J2"
+			],
+			[
+				"START",
+				"STARTUPS_BLUE"
+			],
+			[
+				"ST",
+				"STARTUPS_RED"
+			],
+			[
+				"STA",
+				"STARTUPS_RED"
+			],
+			[
+				"iLE",
+				"iLenCases	var"
+			],
+			[
+				"bR",
+				"bRemplace"
+			],
+			[
+				"iLe",
+				"iLenCasesRemplace	var"
+			],
+			[
+				"plato",
+				"plateau_courant"
+			],
+			[
+				"PLa",
+				"PLAYER_RED"
+			],
+			[
+				"PLAYE",
+				"PLAYER_BLUE"
+			],
+			[
+				"_cal",
+				"_call_GA	function"
+			],
+			[
+				"GA",
+				"GASettings	class"
+			],
+			[
+				"EX",
+				"EX_AEQUO"
+			],
+			[
+				"SIMP",
+				"SIMPLES"
+			],
+			[
+				"fNot",
+				"fNoteTotal"
+			],
+			[
+				"current",
+				"current_player"
+			],
+			[
+				"clas",
+				"class2	shoeboxclass2"
+			],
+			[
+				"get_",
+				"get_content_at"
+			],
+			[
+				"case",
+				"CaseContent	class"
+			],
+			[
+				"ir",
+				"idRootOpp"
+			],
+			[
+				"dis",
+				"dist_factor"
+			],
+			[
+				"getC",
+				"getCase"
+			],
+			[
+				"get_p",
+				"get_graph_du_joueur(...)	fr.hyperfiction.viral.datas.PlayerGrid"
+			],
+			[
+				"a",
+				"aCases"
+			],
+			[
+				"get_ca",
+				"get_cases_ouvertes"
+			],
+			[
+				"getCas",
+				"getCaseContent"
+			],
+			[
+				"set",
+				"setType"
+			],
+			[
+				"_so",
+				"_sortFunc	function"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "include.nmml",
+			"settings":
+			{
+				"buffer_size": 316,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/fr/hyperfiction/HypSystem.hx",
+			"settings":
+			{
+				"buffer_size": 5754,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "project/android/fr/hyperfiction/HypSystem.java",
+			"settings":
+			{
+				"buffer_size": 10701,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 375.0,
+		"selected_items":
+		[
+			[
+				"ppa",
+				"Package Control: List Packages"
+			],
+			[
+				"pack",
+				"Package Control: Disable Package"
+			],
+			[
+				"pp",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"pa",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"p",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"tog",
+				"View: Toggle Side Bar"
+			],
+			[
+				"to",
+				"View: Toggle Side Bar"
+			],
+			[
+				"a",
+				"ADB: Launch"
+			],
+			[
+				"ad",
+				"ADB: Launch"
+			],
+			[
+				"",
+				"ADB: Launch"
+			],
+			[
+				"adb",
+				"ADB: Launch"
+			],
+			[
+				"todo",
+				"Show TODOs: Open files only"
+			],
+			[
+				"v",
+				"View: Toggle Menu"
+			],
+			[
+				"package con",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"instalp",
+				"Package Control: Install Package"
+			],
+			[
+				"menu",
+				"View: Toggle Menu"
+			],
+			[
+				"toggle p",
+				"View: Toggle Open Files in Side Bar"
+			],
+			[
+				"haxe",
+				"Set Syntax: HaXe2"
+			],
+			[
+				"console",
+				"Set Syntax: R Console"
+			],
+			[
+				"me",
+				"View: Toggle Menu"
+			],
+			[
+				"upgr",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"packae",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"PAC",
+				"Package Control: Disable Package"
+			],
+			[
+				"git",
+				"Set Syntax: Git Graph"
+			],
+			[
+				"Snippet: pub",
+				"Snippet: Public variable (pu)"
+			],
+			[
+				"Snippet: ",
+				"Snippet: Class"
+			]
+		],
+		"width": 514.0
+	},
+	"console":
+	{
+		"height": 188.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": false,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Developement/workspaceHaxe/HypRate/project/iphone.sh",
+		"/C/Developement/workspaceHaxe/HypRate/project/Build.xml",
+		"/C/Developement/workspaceHaxe/HypRate/project/android/com/kopfgeldjaeger/ratememaybe/RateMeMaybeFragment.java",
+		"/C/Developement/workspaceHaxe/HypRate/project/android/com/kopfgeldjaeger/ratememaybe/RateMeMaybe.java",
+		"/C/Developement/workspaceHaxe/HypRate/project/include/HypFacebook.h",
+		"/C/Developement/workspaceHaxe/HypRate/project/android/com/kot/ratememaybe/RateMeMaybe.java",
+		"/C/Developement/workspaceHaxe/HypRate/include.nmml",
+		"/C/Developement/workspaceHaxe/HypRate/README.md",
+		"/C/Developement/workspaceHaxe/Viral3/build.hxml",
+		"/C/Developement/workspaceHaxe/HypGA/README.md",
+		"/C/Developement/workspaceHaxe/Viral3/assets/common/ui/misc/fr.txt",
+		"/C/Developement/workspaceHaxe/HypGA/NOTICE",
+		"/C/Developement/workspaceHaxe/Viral3/templates/android/MainActivity.java",
+		"/C/Developement/workspaceHaxe/Viral3/templates/android/AndroidManifest.xml",
+		"/C/Developement/workspaceHaxe/Viral3/build.nmml",
+		"/C/Developement/workspaceHaxe/Viral3/templates/android/AndroidManifest_xhdpi.xml",
+		"/C/Developement/workspaceHaxe/Viral3/templates/android/AndroidManifest_mdpi.xml",
+		"/C/Developement/workspaceHaxe/Viral3/templates/android/AndroidManifest_licensing.xml",
+		"/C/Developement/workspaceHaxe/Viral3/templates/android/AndroidManifest_ldpi.xml",
+		"/C/Developement/workspaceHaxe/Viral3/templates/android/AndroidManifest_hdpi.xml",
+		"/C/Developement/workspaceHaxe/Viral3/templates/android/build.xml",
+		"/C/Developement/workspaceHaxe/Viral3/templates/android/default.properties",
+		"/C/Developement/workspaceHaxe/Viral3/bin-debug/android/bin/src/org/haxe/nme/GameActivity.java",
+		"/C/Developement/workspaceHaxe/Viral3/bin-debug/android/bin/src/fr/hyperfiction/arkeon/MainActivity.java",
+		"/C/Developement/workspaceHaxe/Viral3/bin-debug/android/bin/AndroidManifest.xml",
+		"/C/Developement/workspaceHaxe/Viral3/bin-debug/android/bin/gen/fr/hyperfiction/arkeon/R.java",
+		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/core/MainViral.hx",
+		"/C/Developement/workspaceHaxe/HyperExtensions/extensions/HypGA/include.nmml",
+		"/C/Developement/workspaceHaxe/Viral3/assets/common/ui/misc/en.txt",
+		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/utils/BuildUtil.hx",
+		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/utils/ViralTrads.hx",
+		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/models/MLoading.hx",
+		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/items/Deck.hx",
+		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/items/Case.hx",
+		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/models/MGameMulti.hx",
+		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/views/VGameMulti.hx",
+		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/views/VGameResolution.hx",
+		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/utils/Convertor.hx",
+		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/datas/DatasMultiplayers.hx",
+		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/models/MGame.hx",
+		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/models/MTutorial.hx",
+		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/views/VGame.hx",
+		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/models/MGameResolution.hx",
+		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/controllers/CGameMenu.hx",
+		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/controllers/CLanding.hx",
+		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/controllers/CMenu.hx",
+		"/C/Developement/workspaceHaxe/inthebox/src/org/shoebox/utils/NativeMirror.hx",
+		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/controllers/CGame.hx",
+		"/C/Developement/workspaceHaxe/HypFacebook/include.nmml",
+		"/C/Users/Johann/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/C/Developement/workspaceHaxe/HypFacebook/README.md",
+		"/C/Developement/workspaceHaxe/HypFacebook/haxelib.xml",
+		"/X/Robin/Herocorp/Videos/HC3W_C02_Valur.mov",
+		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/core/ViralAssets.hx",
+		"/C/Developement/workspaceHaxe/HypFacebook/LICENSE",
+		"/C/Developement/workspaceHaxe/HypFacebook/NOTICE",
+		"/C/Developement/workspaceHaxe/HypFacebook/src/fr/hyperfiction/HypFacebook.hx",
+		"/C/Developement/workspaceHaxe/HypFacebook/src/org/shoebox/utils/NativeMirror.hx",
+		"/C/Developement/workspaceHaxe/HypFacebook/src/ShortCuts.hx",
+		"/C/Developement/workspaceHaxe/HyperExtensions/extensions/HypFacebook/readme.md",
+		"/C/Developement/workspaceHaxe/HyperExtensions/extensions/HypFacebook/NOTICE",
+		"/C/Developement/workspaceHaxe/HyperExtensions/extensions/HypFacebook/LICENSE",
+		"/C/Users/Johann/AppData/Roaming/Sublime Text 2/Packages/Dayle Rees Color Schemes/FreshCut.tmTheme",
+		"/C/Users/Johann/AppData/Roaming/Sublime Text 2/Packages/Dayle Rees Color Schemes/Phix Dark.tmTheme",
+		"/C/Users/Johann/AppData/Roaming/Sublime Text 2/Packages/Dayle Rees Color Schemes/Glowfish.tmTheme",
+		"/C/Developement/workspaceHaxe/socket.io-nme-client/Extension/com/gemioli/io/Socket.hx",
+		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/datas/enums/PionRotations.hx",
+		"/C/Developement/workspaceHaxe/Viral3/src/MacroTrads.hx",
+		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/items/pions/APion.hx",
+		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/datas/enums/GameModes.hx",
+		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/utils/CasesUtil.hx",
+		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/views/VGameMenu.hx",
+		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/views/VMenu.hx",
+		"/C/Users/Johann/AppData/Roaming/Sublime Text 2/Packages/VAlign/Default (Windows).sublime-keymap",
+		"/C/Users/Johann/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/Johann/AppData/Roaming/Sublime Text 2/Packages/Alignment/Base File.sublime-settings",
+		"/C/Users/Johann/AppData/Roaming/Sublime Text 2/Packages/User/Haxe.sublime-settings",
+		"/C/Users/Johann/AppData/Roaming/Sublime Text 2/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/Johann/AppData/Roaming/Sublime Text 2/Packages/Alignment/Default (Windows).sublime-keymap",
+		"/C/Users/Johann/AppData/Roaming/Sublime Text 2/Packages/User/Base File.sublime-settings",
+		"/C/Developement/workspaceHaxe/socket.io-nme-client/Extension/include.nmml",
+		"/C/Developement/workspaceHaxe/HyperExtension_Twitter/include.nmml",
+		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/datas/MemContent.hx",
+		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/datas/DatasPlateau2.hx",
+		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/models/MGamePrevisu.hx",
+		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/datas/DatasPlateau.hx",
+		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/datas/DatasGrid.hx",
+		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/datas/PlateauMem.hx",
+		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/utils/DirectionsUtil.hx",
+		"/C/Developement/workspaceHaxe/HyperExtensions/Export/ios/Tests2/Tests2-Info.plist",
+		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/core/FrontViral.hx",
+		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/utils/SFXUtil.hx",
+		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/items/Link.hx",
+		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/datas/CaseContent.hx",
+		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/datas/MemDeck.hx",
+		"/C/Developement/workspaceHaxe/Viral3/Export/ios/Arkeon.xcodeproj/project.xcworkspace/xcuserdata/johann.xcuserdatad/UserInterfaceState.xcuserstate",
+		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/datas/enums/GamePhases.hx",
+		"/C/Developement/workspaceHaxe/Viral3/Export/windows/cpp/obj/include/MemoryGraph.h",
+		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/datas/PlayerGrid.hx",
+		"/C/Developement/workspaceHaxe/Viral3/src/Test.hx",
+		"/C/Developement/workspaceHaxe/Viral3/.git/config",
+		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/ia/CoeffCalculator.hx",
+		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/ia/Ia.hx",
+		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/ia/Zobrist.hx",
+		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/datas/PlayerDeck.hx",
+		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/controllers/COptions.hx",
+		"/C/Motion-Twin/haxe/lib/nme/3,5,5/native/utils/ByteArray.hx",
+		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/datas/enums/PionTypes.hx",
+		"/C/Developement/workspaceHaxe/Viral3/Export/windows/cpp/bin/log.txt",
+		"/C/Motion-Twin/haxe/std/flash/utils/ByteArray.hx",
+		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/datas/PlayerMem.hx",
+		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/datas/DatasMem.hx",
+		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/utils/PionsUtil.hx",
+		"/C/Developement/workspaceHaxe/inthebox/src_test/TestGraph.hx",
+		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/controllers/CRules.hx",
+		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/controllers/CFondAccueil.hx",
+		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/commands/ComReset.hx",
+		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/commands/ComMouseGlow.hx",
+		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/commands/ComEnterFrame.hx",
+		"/C/Motion-Twin/haxe/lib/polygonal-ds/1,37/de/polygonal/ds/Graph.hx",
+		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/ia/GASettings.hx",
+		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/ia/UtilsIa.hx",
+		"/C/Motion-Twin/haxe/lib/polygonal-ds/1,37/de/polygonal/ds/GraphNode.hx",
+		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/ia/HeatMap.hx",
+		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/ia/GA.hx",
+		"/C/Users/Johann/AppData/Local/Temp/Main-1.hx",
+		"/C/Motion-Twin/haxe/lib/nme/3,5,5/templates/default/android/template/src/org/haxe/nme/GameActivity.java",
+		"/C/Developement/workspaceHaxe/Viral3/android_build.xml"
+	],
+	"find":
+	{
+		"height": 56.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"C:\\Developement\\workspaceHaxe\\Viral3\\src",
+			"C:\\Developement\\workspaceHaxe\\Viral3\\",
+			"C:\\Developement\\workspaceHaxe\\Viral3\\src",
+			"C:\\Developement\\workspaceHaxe\\Viral3\\",
+			"C:\\Developement\\workspaceHaxe\\Viral3\\src",
+			"<open folders>",
+			"C:\\Motion-Twin\\haxe\\lib\\polygonal-ds\\1,36\\de\\polygonal",
+			"C:\\Developement\\workspaceHaxe\\Viral3\\src",
+			"C:\\Developement\\workspaceHaxe\\Viral3\\",
+			"C:\\Developement\\workspaceHaxe\\Viral3\\src",
+			"C:\\Developement\\workspaceHaxe\\Viral3\\export\\ios",
+			"C:\\Developement\\workspaceHaxe\\Viral3\\export\\iphone",
+			"C:\\Developement\\workspaceHaxe\\Viral3\\",
+			"C:\\Developement\\workspaceHaxe\\Viral3\\de",
+			"C:\\Developement\\workspaceHaxe\\Viral3\\src",
+			"C:\\Developement\\workspaceHaxe\\Viral2\\src",
+			"C:\\Developement\\workspaceHaxe\\Viral3\\src",
+			"C:\\Developement\\workspaceHaxe\\Viral3\\unittests",
+			"C:\\Developement\\workspaceHaxe\\Viral3\\src",
+			"C:\\Developement\\workspaceHaxe\\Viral2\\src",
+			"C:\\Developement\\workspaceHaxe\\Ludo_Marsupilami\\src",
+			"<open folders>",
+			"C:\\Users\\Johann\\workspaceHaxe\\Ludo_Marsupilami\\",
+			"C:\\Users\\Johann\\workspaceHaxe\\Ludo_Marsupilami\\src",
+			"<open folders>,C:\\Users\\Johann\\workspaceHaxe\\HyperExtensions\\extensions",
+			"<open folders>",
+			"C:\\Users\\Johann\\workspaceHaxe\\Hyperfiction - Sumatra\\src",
+			"C:\\Users\\Johann\\workspaceHaxe\\CAOSFD\\caos\\libs",
+			"C:\\Users\\Johann\\workspaceHaxe\\CAOSFD\\caos\\",
+			"C:\\Users\\Johann\\workspaceHaxe\\CAOSFD\\caos\\Source\\",
+			"C:\\Users\\Johann\\workspaceHaxe\\CAOSFD\\caos\\Source\\fr",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"'",
+			"dialog",
+			"AlertDialog.Builder",
+			"waveLock",
+			"haxeobj",
+			"show_error_dialog",
+			"_f_show_loading",
+			"_f_is_iphone",
+			"_f_hide_system_bar",
+			"_f_lights_out",
+			"_f_screen_bucket",
+			"_fisConnectedtoInternet",
+			"_f_show_dialog",
+			"show_error_dialog",
+			"_f_hide_loading",
+			"_get_system_language",
+			"isConnectedtoInternet",
+			"_show_error_dialog",
+			":s",
+			"HypRate_",
+			"APPIRATER_RATE_LATER",
+			"APPIRATER_CANCEL_BUTTON",
+			"_txt",
+			"APPIRATER_MESSAGE_TITLE",
+			"APPIRATER_",
+			"APPIRATER_LOCALIZED_APP_NAME",
+			"APPIRATER_APP_NAME",
+			"APPIRATER_RATE_LATER",
+			"APPIRATER_RATE_BUTTON",
+			"APPIRATER_MESSAGE",
+			"APPIRATER_RATE_BUTTON",
+			"APPIRATER_CANCEL_BUTTON",
+			"APPIRATER_LOCALIZED_RATE_BUTTON",
+			"APPIRATER_CANCEL_BUTTON",
+			"APPIRATER_LOCALIZED_MESSAGE",
+			"APPIRATER_APP_NAME",
+			"APPIRATER_LOCALIZED_APP_NAME",
+			"APPIRATER_CANCEL_BUTTON",
+			"APPIRATER_LOCALIZED_MESSAGE",
+			"HypFacebook",
+			"Neutral",
+			"Positive",
+			"Dialog",
+			"_msg",
+			"static",
+			"/**\n		*\n		*\n		* @public\n		* @return	void\n		*/\n		static public void setDialog_message( String s ){\n\n		}",
+			"HypSystem",
+			"@:build",
+			"/",
+			"template",
+			"lang =",
+			"lang",
+			"LANG",
+			"_on_stage_click",
+			"hypga",
+			"_log",
+			"_gamer",
+			".build",
+			"rele",
+			"HypGA.getInstance( ).getInstance( )",
+			"HypGA.getInstance( )",
+			".getInstance( )",
+			"HypGA.getInstance( )",
+			"_disconnect",
+			"disconnect",
+			"bHost",
+			"set_current_player",
+			".winner",
+			"tween",
+			"tween*",
+			"\"\"",
+			"looser_r",
+			"italic",
+			"comment",
+			"71be13",
+			"71be00",
+			"italic",
+			"_show_winner",
+			"ishost",
+			"pion_rotation",
+			"bmpLigne",
+			"bmpFillet",
+			"deckitem",
+			"spDeckBlue",
+			"spDeckBlue =",
+			"spDeckBlue",
+			"bRevert",
+			"isHost",
+			"get_x_from_id",
+			"tab",
+			"_onEvent",
+			"include path",
+			";\n",
+			"_playMode",
+			"model.get_game_mode( )",
+			"_game_mode",
+			"'",
+			"btnCredits",
+			"DirectionsUtil",
+			"get_",
+			"DirectionsUtil.",
+			"playerCurrent",
+			"player",
+			"plato.contenu.getType( i ",
+			"plato.last.player",
+			"plato.player",
+			"fb49",
+			"fb",
+			"_aCases",
+			"dernier_coup",
+			"remove_pion",
+			"\\t",
+			"dernier_coup",
+			"iCase_id",
+			"_getRotation",
+			"dernier_coup",
+			"joue_pion",
+			"phase",
+			"Phase",
+			"phase",
+			"plateau_courant",
+			"pre_joue_pion",
+			"player_joue_pion_at_case",
+			"annule_pre_jeu",
+			";\n",
+			"pre_joue_pion",
+			"player_joue_pion_at_case",
+			"annule_pre_jeu"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"HypGA.getInstance( )",
+			"HypGA",
+			"\n					//fc.tutorial( );",
+			"HypSystem.isSmartPhone",
+			"HypSystem.isTablet",
+			"//trace(",
+			"PionRotations",
+			"rotation",
+			"_spGhosts",
+			"PionGhost",
+			"build.",
+			"plateau_courant",
+			"get_cases_adjacentes",
+			"ViralAssets.aabb.height",
+			"ViralAssets.aabb.width",
+			"aabb.height",
+			"aabb.width",
+			" extends APion",
+			"extends APion",
+			"",
+			"\"filename\": \"fishes/04/",
+			"\"filename\": \"fishes/03/",
+			"\"filename\": \"fishes/02/",
+			"\"filename\": \"fishes/03/",
+			"\"filename\": \"fishes/02/",
+			"\"filename\": \"fishes/01/",
+			"\"filename\": \"fishes/00/",
+			"\"filename\": \"fishes/",
+			"MarsuAssets.fDensity",
+			"MarsuAssets.FONT_NAME",
+			"Assets",
+			"bmpSketch",
+			"FrontSumatra.getStageAABB( )",
+			"",
+			"bmpPaint",
+			"spSketch",
+			"<aniname>",
+			"</aniname>",
+			"",
+			"bmpMap",
+			"_mcContainer",
+			"aabb",
+			"App_Camera",
+			"CCamera",
+			"VCamera",
+			"MCamera",
+			"( );",
+			"Multitouch",
+			"FPoint",
+			"_oView",
+			"_iHalfX",
+			"48",
+			"38",
+			"_pWorldPos",
+			"_pPosProj",
+			"<T>",
+			"<Tile2D>",
+			"_pPosProjected",
+			"_pPosWorld",
+			"y",
+			"x",
+			"_oViewSize",
+			"_vPosWorld.dy",
+			"_vPosWorld.dx"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "include.nmml",
+					"settings":
+					{
+						"buffer_size": 316,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"buffer_scroll_name": "5413abac",
+							"haxe-build-id": 0,
+							"syntax": "Packages/Haxe/NMML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/fr/hyperfiction/HypSystem.hx",
+					"settings":
+					{
+						"buffer_size": 5754,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3588,
+								3588
+							]
+						],
+						"settings":
+						{
+							"buffer_scroll_name": "0a7748d9",
+							"haxe-build-id": 0,
+							"syntax": "Packages/Haxe/Haxe.tmLanguage",
+							"translate_tabs_to_spaces": false,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3139.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 2,
+					"file": "project/android/fr/hyperfiction/HypSystem.java",
+					"settings":
+					{
+						"buffer_size": 10701,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7593,
+								7609
+							]
+						],
+						"settings":
+						{
+							"buffer_scroll_name": "cd22d51f",
+							"syntax": "Packages/Java/Java.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 4795.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 35.0
+	},
+	"input":
+	{
+		"height": 32.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.465584935897,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": false,
+	"output.aaa_package_dev":
+	{
+		"height": 92.0
+	},
+	"output.exec":
+	{
+		"height": 105.0
+	},
+	"output.find_results":
+	{
+		"height": 430.0
+	},
+	"output.haxe":
+	{
+		"height": 124.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"hyps",
+				"src/fr/hyperfiction/HypSystem.hx"
+			],
+			[
+				"iphone",
+				"project/iphone.sh"
+			],
+			[
+				"bu",
+				"project/Build.xml"
+			],
+			[
+				"hypr",
+				"project/include/HypRate.h"
+			],
+			[
+				"app",
+				"project/iPhone/include/Appirater.m"
+			],
+			[
+				"ex",
+				"project/common/ExternalInterface.cpp"
+			],
+			[
+				"re",
+				"README.md"
+			],
+			[
+				"ratem",
+				"project/android/com/kopfgeldjaeger/ratememaybe/RateMeMaybe.java"
+			],
+			[
+				"androidm",
+				"templates/android/AndroidManifest.xml"
+			],
+			[
+				"maina",
+				"templates/android/MainActivity.java"
+			],
+			[
+				"mainac",
+				"templates/android/MainActivity.java"
+			],
+			[
+				"android",
+				"templates/android/AndroidManifest_xhdpi.xml"
+			],
+			[
+				"mloa",
+				"src/fr/hyperfiction/viral/models/MLoading.hx"
+			],
+			[
+				"mainv",
+				"src/fr/hyperfiction/viral/core/MainViral.hx"
+			],
+			[
+				"macro",
+				"src/MacroTrads.hx"
+			],
+			[
+				"fr",
+				"assets/common/ui/misc/fr.txt"
+			],
+			[
+				"vi",
+				"src/fr/hyperfiction/viral/utils/ViralTrads.hx"
+			],
+			[
+				"vir",
+				"src/fr/hyperfiction/viral/core/ViralAssets.hx"
+			],
+			[
+				"en",
+				"assets/common/ui/misc/en.txt"
+			],
+			[
+				"pop",
+				"src/fr/hyperfiction/viral/items/tutorial/Popup.hx"
+			],
+			[
+				"vga",
+				"src/fr/hyperfiction/viral/views/VGameMulti.hx"
+			],
+			[
+				"mload",
+				"src/fr/hyperfiction/viral/models/MLoading.hx"
+			],
+			[
+				"cgame",
+				"src/fr/hyperfiction/viral/controllers/CGame.hx"
+			],
+			[
+				"build",
+				"src/fr/hyperfiction/viral/utils/BuildUtil.hx"
+			],
+			[
+				"trad",
+				"src/fr/hyperfiction/viral/utils/ViralTrads.hx"
+			],
+			[
+				"vgamem",
+				"src/fr/hyperfiction/viral/views/VGameMulti.hx"
+			],
+			[
+				"mmut",
+				"src/fr/hyperfiction/viral/models/MGameMulti.hx"
+			],
+			[
+				"buid",
+				"src/fr/hyperfiction/viral/utils/BuildUtil.hx"
+			],
+			[
+				"mgamer",
+				"src/fr/hyperfiction/viral/models/MGameResolution.hx"
+			],
+			[
+				"mtut",
+				"src/fr/hyperfiction/viral/models/MTutorial.hx"
+			],
+			[
+				"frontv",
+				"src/fr/hyperfiction/viral/core/FrontViral.hx"
+			],
+			[
+				"vgam",
+				"src/fr/hyperfiction/viral/views/VGame.hx"
+			],
+			[
+				"vgame",
+				"src/fr/hyperfiction/viral/views/VGame.hx"
+			],
+			[
+				"mlo",
+				"src/fr/hyperfiction/viral/models/MLoading.hx"
+			],
+			[
+				"ml",
+				"src/fr/hyperfiction/viral/models/MLoading.hx"
+			],
+			[
+				"mtu",
+				"src/fr/hyperfiction/viral/models/MTutorial.hx"
+			],
+			[
+				"androi",
+				"templates/android/AndroidManifest.xml"
+			],
+			[
+				"build.xml",
+				"templates/android/build.xml"
+			],
+			[
+				"mloai",
+				"src/fr/hyperfiction/viral/models/MLoading.hx"
+			],
+			[
+				"mgame",
+				"src/fr/hyperfiction/viral/models/MGame.hx"
+			],
+			[
+				"datasm",
+				"src/fr/hyperfiction/viral/datas/DatasMultiplayers.hx"
+			],
+			[
+				"pionr",
+				"src/fr/hyperfiction/viral/datas/enums/PionRotations.hx"
+			],
+			[
+				"deck",
+				"src/fr/hyperfiction/viral/items/Deck.hx"
+			],
+			[
+				"trads",
+				"src/MacroTrads.hx"
+			],
+			[
+				"convert",
+				"src/fr/hyperfiction/viral/utils/Convertor.hx"
+			],
+			[
+				"apion",
+				"src/fr/hyperfiction/viral/items/pions/APion.hx"
+			],
+			[
+				"vgamre",
+				"src/fr/hyperfiction/viral/views/VGameResolution.hx"
+			],
+			[
+				"conver",
+				"src/fr/hyperfiction/viral/utils/Convertor.hx"
+			],
+			[
+				"case",
+				"src/fr/hyperfiction/viral/items/Case.hx"
+			],
+			[
+				"gamem",
+				"src/fr/hyperfiction/viral/datas/enums/GameModes.hx"
+			],
+			[
+				"macot",
+				"src/MacroTrads.hx"
+			],
+			[
+				"caseu",
+				"src/fr/hyperfiction/viral/utils/CasesUtil.hx"
+			],
+			[
+				"cgamem",
+				"src/fr/hyperfiction/viral/controllers/CGameMulti.hx"
+			],
+			[
+				"bui",
+				"build.nmml"
+			],
+			[
+				"mgamr",
+				"src/fr/hyperfiction/viral/models/MGameResolution.hx"
+			],
+			[
+				"cmenu",
+				"src/fr/hyperfiction/viral/controllers/CMenu.hx"
+			],
+			[
+				"front",
+				"src/fr/hyperfiction/viral/core/FrontViral.hx"
+			],
+			[
+				"v",
+				"src/fr/hyperfiction/viral/views/VMenu.hx"
+			],
+			[
+				"mmenu",
+				"src/fr/hyperfiction/viral/controllers/CGameMenu.hx"
+			],
+			[
+				"dataspl",
+				"src/fr/hyperfiction/viral/datas/DatasPlateau2.hx"
+			],
+			[
+				"memcon",
+				"src/fr/hyperfiction/viral/datas/MemContent.hx"
+			],
+			[
+				"dire",
+				"src/fr/hyperfiction/viral/utils/DirectionsUtil.hx"
+			],
+			[
+				"casesu",
+				"src/fr/hyperfiction/viral/utils/CasesUtil.hx"
+			],
+			[
+				"datas",
+				"src/fr/hyperfiction/viral/datas/DatasPlateau2.hx"
+			],
+			[
+				"memc",
+				"src/fr/hyperfiction/viral/datas/MemContent.hx"
+			],
+			[
+				"vgamr",
+				"src/fr/hyperfiction/viral/views/VGameResolution.hx"
+			],
+			[
+				"vgamer",
+				"src/fr/hyperfiction/viral/views/VGameResolution.hx"
+			],
+			[
+				"sfxut",
+				"src/fr/hyperfiction/viral/utils/SFXUtil.hx"
+			],
+			[
+				"fronth",
+				"src/fr/hyperfiction/viral/core/FrontViral.hx"
+			],
+			[
+				"cgamemnu",
+				"src/fr/hyperfiction/viral/controllers/CGameMenu.hx"
+			],
+			[
+				"sfx",
+				"src/fr/hyperfiction/viral/utils/SFXUtil.hx"
+			],
+			[
+				"direct",
+				"src/fr/hyperfiction/viral/utils/DirectionsUtil.hx"
+			],
+			[
+				"datasg",
+				"src/fr/hyperfiction/viral/datas/DatasGrid.hx"
+			],
+			[
+				"datasgr",
+				"src/fr/hyperfiction/viral/datas/DatasGrid.hx"
+			],
+			[
+				"link",
+				"src/fr/hyperfiction/viral/items/Link.hx"
+			],
+			[
+				"casecon",
+				"src/fr/hyperfiction/viral/datas/CaseContent.hx"
+			],
+			[
+				"memde",
+				"src/fr/hyperfiction/viral/datas/MemDeck.hx"
+			],
+			[
+				"plat",
+				"src/fr/hyperfiction/viral/datas/PlateauMem.hx"
+			],
+			[
+				"pla",
+				"src/fr/hyperfiction/viral/datas/PlateauMem.hx"
+			],
+			[
+				"datasgri",
+				"src/fr/hyperfiction/viral/datas/DatasGrid.hx"
+			],
+			[
+				"caseus",
+				"Export/ios/Arkeon.xcodeproj/project.xcworkspace/xcuserdata/johann.xcuserdatad/UserInterfaceState.xcuserstate"
+			],
+			[
+				"gameph",
+				"src/fr/hyperfiction/viral/datas/enums/GamePhases.hx"
+			],
+			[
+				"mem",
+				"Export/windows/cpp/obj/include/MemoryGraph.h"
+			],
+			[
+				"mgamere",
+				"src/fr/hyperfiction/viral/models/MGameResolution.hx"
+			],
+			[
+				"mcon",
+				"src/fr/hyperfiction/viral/datas/MemContent.hx"
+			],
+			[
+				"mloadin",
+				"src/fr/hyperfiction/viral/models/MLoading.hx"
+			],
+			[
+				"datagr",
+				"src/fr/hyperfiction/viral/datas/DatasGrid.hx"
+			],
+			[
+				"player",
+				"src/fr/hyperfiction/viral/datas/PlayerGrid.hx"
+			],
+			[
+				"playerde",
+				"src/fr/hyperfiction/viral/datas/PlayerDeck.hx"
+			],
+			[
+				"datasgrid",
+				"src/fr/hyperfiction/viral/datas/DatasGrid.hx"
+			],
+			[
+				"dec",
+				"src/fr/hyperfiction/viral/items/Deck.hx"
+			],
+			[
+				"zo",
+				"src/fr/hyperfiction/viral/ia/Zobrist.hx"
+			],
+			[
+				"ia",
+				"src/fr/hyperfiction/viral/ia/Ia.hx"
+			],
+			[
+				"coeff",
+				"src/fr/hyperfiction/viral/ia/CoeffCalculator.hx"
+			],
+			[
+				"c",
+				"src/fr/hyperfiction/viral/controllers/COptions.hx"
+			],
+			[
+				"b",
+				"build.nmml"
+			],
+			[
+				"plateaum",
+				"src/fr/hyperfiction/viral/datas/PlateauMem.hx"
+			],
+			[
+				"test",
+				"src/Test.hx"
+			],
+			[
+				"pion",
+				"src/fr/hyperfiction/viral/datas/enums/PionTypes.hx"
+			],
+			[
+				"pionty",
+				"src/fr/hyperfiction/viral/datas/enums/PionTypes.hx"
+			],
+			[
+				"main",
+				"src/fr/hyperfiction/viral/core/MainViral.hx"
+			],
+			[
+				"play",
+				"src/fr/hyperfiction/viral/datas/PlayerDeck.hx"
+			],
+			[
+				"mloading",
+				"src/fr/hyperfiction/viral/models/MLoading.hx"
+			],
+			[
+				"claing",
+				"src/fr/hyperfiction/viral/controllers/CLanding.hx"
+			],
+			[
+				"coptio",
+				"src/fr/hyperfiction/viral/controllers/COptions.hx"
+			],
+			[
+				"frontvi",
+				"src/fr/hyperfiction/viral/core/FrontViral.hx"
+			],
+			[
+				"crules",
+				"src/fr/hyperfiction/viral/controllers/CRules.hx"
+			],
+			[
+				"coptions",
+				"src/fr/hyperfiction/viral/controllers/COptions.hx"
+			],
+			[
+				"buildut",
+				"src/fr/hyperfiction/viral/utils/BuildUtil.hx"
+			],
+			[
+				"playergr",
+				"src/fr/hyperfiction/viral/datas/PlayerGrid.hx"
+			],
+			[
+				"playe",
+				"src/fr/hyperfiction/viral/datas/PlayerGrid.hx"
+			],
+			[
+				"utili",
+				"src/fr/hyperfiction/viral/ia/UtilsIa.hx"
+			],
+			[
+				"viral",
+				"src/fr/hyperfiction/viral/core/ViralAssets.hx"
+			],
+			[
+				"virala",
+				"src/fr/hyperfiction/viral/core/ViralAssets.hx"
+			],
+			[
+				"ga.hx",
+				"src/fr/hyperfiction/viral/ia/GA.hx"
+			],
+			[
+				"gas",
+				"src/fr/hyperfiction/viral/ia/GASettings.hx"
+			],
+			[
+				"consti",
+				"src/fr/hyperfiction/viral/ia/ConstsIa.hx"
+			],
+			[
+				"coef",
+				"src/fr/hyperfiction/viral/ia/CoeffCalculator.hx"
+			],
+			[
+				"heatm",
+				"src/fr/hyperfiction/viral/ia/HeatMap.hx"
+			],
+			[
+				"gase",
+				"src/fr/hyperfiction/viral/ia/GASettings.hx"
+			],
+			[
+				"pionro",
+				"src/fr/hyperfiction/viral/datas/enums/PionRotations.hx"
+			],
+			[
+				"indivi",
+				"src/fr/hyperfiction/viral/ia/OldIndividu.hx"
+			],
+			[
+				"indi",
+				"Export/android/obj/include/fr/hyperfiction/viral/ia/Individu.h"
+			],
+			[
+				"heat",
+				"src/fr/hyperfiction/viral/ia/HeatMap.hx"
+			],
+			[
+				"comne",
+				"src/fr/hyperfiction/viral/commands/ComNextMoveIa.hx"
+			],
+			[
+				"ia.h",
+				"src/fr/hyperfiction/viral/ia/Ia.hx"
+			],
+			[
+				"comre",
+				"src/fr/hyperfiction/viral/commands/ComReset.hx"
+			],
+			[
+				"mu",
+				"src/fr/hyperfiction/viral/utils/MusicsUtil.hx"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/C/Developement/workspaceHaxe/HypRate/HypRate.sublime-project"
+			],
+			[
+				"C",
+				"/C/Developement/workspaceHaxe/sumatra.sublime-project"
+			],
+			[
+				"test",
+				"/C/Users/Johann/workspaceHaxe/testsproj.sublime-project"
+			],
+			[
+				"caos",
+				"/C/Users/Johann/workspaceHaxe/CAOSFD/caos/test.sublime-project"
+			]
+		],
+		"width": 765.0
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 160.0,
+	"status_bar_visible": true
+}
