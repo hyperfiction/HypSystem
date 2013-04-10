@@ -312,10 +312,12 @@ class HypSystem{
 		* @public
 		* @return	void
 		*/
-		static public void openDialog( String error_msg , boolean bCancelable ){
+		static public void openDialog( String error_msg , boolean bCancelable , String sTitle ){
 			trace("show_error_dialog ::: "+error_msg+" - "+bCancelable);
 			final AlertDialog.Builder builder = new AlertDialog.Builder( GameActivity.getContext( ) , 2 );
            						builder.setMessage( error_msg );
+           						if( sTitle != "" )
+           							builder.setTitle( sTitle );
            						builder.setNegativeButton("OK",
            							new DialogInterface.OnClickListener() {
 						                @Override
@@ -342,14 +344,16 @@ class HypSystem{
 		* @return	void
 		*/
 		static public void openCustomDialog(
-												String error_msg ,
-												String sButtonPos ,
-												String sButtonNeg ,
-												final HaxeObject obj_call_back
-											){
-			trace("show_custom_dialog error_msg : "+error_msg+" | sButtonPos : "+sButtonPos+" | sButtonNeg : "+sButtonNeg);
+										String sTitle,
+										String sText ,
+										String sButtonPos ,
+										String sButtonNeg ,
+										final HaxeObject obj_call_back
+									){
+			trace("show_custom_dialog error_msg : "+sText+" | sButtonPos : "+sButtonPos+" | sButtonNeg : "+sButtonNeg);
 			final AlertDialog.Builder 	builder = new AlertDialog.Builder( GameActivity.getContext( ) , 2 );
-									builder.setMessage( error_msg );
+									builder.setTitle( sTitle );
+									builder.setMessage( sText );
 									builder.setPositiveButton( sButtonPos , new DialogInterface.OnClickListener() {
 										public void onClick(DialogInterface dialog, int id) {
 											trace("onclick button pos");

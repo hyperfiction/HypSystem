@@ -531,7 +531,7 @@
 			"file": "src/fr/hyperfiction/HypSystem.hx",
 			"settings":
 			{
-				"buffer_size": 5754,
+				"buffer_size": 5421,
 				"line_ending": "Unix"
 			}
 		},
@@ -539,7 +539,7 @@
 			"file": "project/android/fr/hyperfiction/HypSystem.java",
 			"settings":
 			{
-				"buffer_size": 10701,
+				"buffer_size": 11131,
 				"line_ending": "Windows"
 			}
 		}
@@ -696,6 +696,7 @@
 	},
 	"file_history":
 	[
+		"/C/Developement/workspaceHaxe/HypSystem/README.md",
 		"/C/Developement/workspaceHaxe/HypRate/project/iphone.sh",
 		"/C/Developement/workspaceHaxe/HypRate/project/Build.xml",
 		"/C/Developement/workspaceHaxe/HypRate/project/android/com/kopfgeldjaeger/ratememaybe/RateMeMaybeFragment.java",
@@ -822,8 +823,7 @@
 		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/ia/HeatMap.hx",
 		"/C/Developement/workspaceHaxe/Viral3/src/fr/hyperfiction/viral/ia/GA.hx",
 		"/C/Users/Johann/AppData/Local/Temp/Main-1.hx",
-		"/C/Motion-Twin/haxe/lib/nme/3,5,5/templates/default/android/template/src/org/haxe/nme/GameActivity.java",
-		"/C/Developement/workspaceHaxe/Viral3/android_build.xml"
+		"/C/Motion-Twin/haxe/lib/nme/3,5,5/templates/default/android/template/src/org/haxe/nme/GameActivity.java"
 	],
 	"find":
 	{
@@ -873,6 +873,16 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"_f_show_loading",
+			"_f_show_dialog",
+			"_f_show_dialog2",
+			"showError_dialog",
+			"openCustomDialog",
+			"_show_error_dialog",
+			"openDialog",
+			"( )",
+			"dismiss_loading",
+			"_get_system_language",
 			"'",
 			"dialog",
 			"AlertDialog.Builder",
@@ -990,17 +1000,7 @@
 			"_getRotation",
 			"dernier_coup",
 			"joue_pion",
-			"phase",
-			"Phase",
-			"phase",
-			"plateau_courant",
-			"pre_joue_pion",
-			"player_joue_pion_at_case",
-			"annule_pre_jeu",
-			";\n",
-			"pre_joue_pion",
-			"player_joue_pion_at_case",
-			"annule_pre_jeu"
+			"phase"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1097,8 +1097,8 @@
 						"selection":
 						[
 							[
-								0,
-								0
+								316,
+								316
 							]
 						],
 						"settings":
@@ -1118,15 +1118,15 @@
 					"file": "src/fr/hyperfiction/HypSystem.hx",
 					"settings":
 					{
-						"buffer_size": 5754,
+						"buffer_size": 5421,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3588,
-								3588
+								102,
+								102
 							]
 						],
 						"settings":
@@ -1138,7 +1138,7 @@
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3139.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1154,25 +1154,26 @@
 					"file": "project/android/fr/hyperfiction/HypSystem.java",
 					"settings":
 					{
-						"buffer_size": 10701,
+						"buffer_size": 11131,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7593,
-								7609
+								8411,
+								8411
 							]
 						],
 						"settings":
 						{
 							"buffer_scroll_name": "cd22d51f",
 							"syntax": "Packages/Java/Java.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"translate_tabs_to_spaces": false,
+							"word_wrap": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 4795.0,
+						"translation.y": 4647.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1766,7 +1767,7 @@
 		[
 			[
 				"",
-				"/C/Developement/workspaceHaxe/HypRate/HypRate.sublime-project"
+				"/C/Developement/workspaceHaxe/inthebox/inthebox.sublime-project"
 			],
 			[
 				"C",
@@ -1786,7 +1787,7 @@
 	"show_minimap": false,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": false,
+	"side_bar_visible": true,
 	"side_bar_width": 160.0,
 	"status_bar_visible": true
 }

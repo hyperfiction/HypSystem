@@ -6,22 +6,13 @@ import cpp.Lib;
 #elseif neko
 import neko.Lib;
 #end
-/**
- * ...
- * @author shoe[box]
- */
 
+/**
+* ...
+* @author shoe[box]
+*/
 @:build( org.shoebox.utils.NativeMirror.build( ) )
 class HypSystem{
-
-	#if android
-	private static var _f_show_dialog			: Dynamic;
-	private static var _f_show_dialog2			: Dynamic;
-	private static var _f_show_loading			: Dynamic;
-
-	private static inline var ANDROID_CLASS : String = 'fr/hyperfiction/HypSystem';
-	#end
-
 
 	#if iphone
 	private static var hyp_webview_screen_w	= Lib.load( "HypSystem" , "HypSystem_screen_width"  , 0 );
@@ -30,8 +21,8 @@ class HypSystem{
 	#end
 
 	#if blackberry
-	private static var hyp_show_loading		= Lib.load( "HypSystem" , "HypSystem_show_loading"  , 0 );
-	private static var hyp_hide_loading		= Lib.load( "HypSystem" , "HypSystem_hide_loading"  , 0 );
+	private static var hyp_show_loading	= Lib.load( "HypSystem" , "HypSystem_show_loading"  , 0 );
+	private static var hyp_hide_loading	= Lib.load( "HypSystem" , "HypSystem_hide_loading"  , 0 );
 	private static var hyp_system_lang		= Lib.load( "HypSystem" , "HypSystem_get_system_lang" , 0 );
 	private static var hyp_launch_browser	= Lib.load( "HypSystem" , "HypSystem_launch_browser" , 1 );
 	#end
@@ -92,17 +83,18 @@ class HypSystem{
 		* @return	void
 		*/
 		static public function showError_dialog(
-													sText : String
-													#if android,
-													?bCancelable : Bool,
-													?sNeg	: String ,
-													?sPos	: String ,
-													?fPos	: Void->Void,
-													?fNeg	: Void->Void
-													#end
-												) : Void {
+											sTitle		: String,
+											sText		: String
+											#if android	,
+											?bCancelable	: Bool,
+											?sNeg		: String ,
+											?sPos		: String ,
+											?fPos		: Void->Void,
+											?fNeg		: Void->Void
+											#end
+										) : Void {
 			#if android
-			_show_error_dialog( sText , bCancelable , sNeg , sPos , fPos , fNeg );
+			_show_error_dialog( sTitle , sText , bCancelable , sNeg , sPos , fPos , fNeg );
 			#end
 		}
 
@@ -187,6 +179,7 @@ class HypSystem{
 		* @return	void
 		*/
 		static private function _show_error_dialog(
+											sTitle		: String,
 											sText		: String ,
 											?bCancelable	: Bool,
 											?sNeg		: String ,
@@ -200,11 +193,19 @@ class HypSystem{
 				if( sNeg == null && sPos == null ){
 					openDialog( sText , bCancelable );
 				}else{
-					if( _f_show_dialog2 == null )
-						_f_show_dialog2 = JNI.createStaticMethod( ANDROID_CLASS , "openCustomDialog" , "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/haxe/nme/HaxeObject;)V" );
-						_f_show_dialog2( sText , sNeg , sPos , new PopupCallBack( fPos , fNeg ) );
+					openCustomDialog( sTitle , sText , sNeg , sPos , new PopupCallBack( fPos , fNeg ) );
 				}
 			#end
+		}
+
+		/**
+		*
+		*
+		* @private
+		* @return	void
+		*/
+		@JNI
+		static private function openCustomDialog( sTitle : String , sText : String , sPos : String , sNeg : String , cb : HaxeObject ) : Void{
 		}
 
 
@@ -317,7 +318,7 @@ class HypSystem{
  * @author shoe[box]
  */
 
-class PopupCallBack{
+class PopupCallBack extends HaxeObject{
 
 	public var fPos : Void->Void;
 	public var fNeg : Void->Void;
@@ -365,4 +366,11 @@ class PopupCallBack{
 
 }
 
+#end
+
+
+#if android
+class HaxeObject{
+
+}
 #end
