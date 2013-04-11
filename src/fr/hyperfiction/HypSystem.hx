@@ -14,12 +14,6 @@ import neko.Lib;
 @:build( org.shoebox.utils.NativeMirror.build( ) )
 class HypSystem{
 
-	#if iphone
-	private static var hyp_webview_screen_w	= Lib.load( "HypSystem" , "HypSystem_screen_width"  , 0 );
-	private static var hyp_webview_screen_h	= Lib.load( "HypSystem" , "HypSystem_screen_height" , 0 );
-	private static var hyp_system_lang		= Lib.load( "HypSystem" , "HypSystem_get_system_lang" , 0 );
-	#end
-
 	#if blackberry
 	private static var hyp_show_loading	= Lib.load( "HypSystem" , "HypSystem_show_loading"  , 0 );
 	private static var hyp_hide_loading	= Lib.load( "HypSystem" , "HypSystem_hide_loading"  , 0 );
@@ -106,6 +100,9 @@ class HypSystem{
 		*/
 		#if android
 		@JNI
+		#end
+		#if ios
+		@CPP( "HypSystem" , "HypSystem_get_system_lang" )
 		#end
 		static public function getSystem_lang( ) : String {
 
@@ -204,12 +201,17 @@ class HypSystem{
 		* @private
 		* @return	void
 		*/
+		#if android
 		@JNI
+		#end
 		static private function openCustomDialog( sTitle : String , sText : String , sPos : String , sNeg : String , cb : HaxeObject ) : Void{
 		}
 
 		//Privates
+
+		#if android
 		@JNI
+		#end
 		private static function openDialog( sTitle : String , sText : String , bCancelable : Bool ) : Void{}
 
 
@@ -225,6 +227,7 @@ class HypSystem{
 		* @public
 		* @return	void
 		*/
+		@CPP("HypSystem","HypSystem_screen_width")
 		static public function get_screen_width( ) : Int {
 			return hyp_webview_screen_w( );
 		}
@@ -235,6 +238,7 @@ class HypSystem{
 		* @public
 		* @return	void
 		*/
+		@CPP("HypSystem","HypSystem_screen_height")
 		static public function get_screen_height( ) : Int {
 			return hyp_webview_screen_h( );
 		}
