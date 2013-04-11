@@ -7,7 +7,7 @@ This extensions contains a bunch of tools methods for iOS & Android ( and some f
 
 Installation
 ------------
-There is an [include.nmml]() file and [ndll]() are compiled for:
+There is an [include.nmml]() file and the [ndll]() are compiled for:
 * ios armv6
 * ios armv7
 * ios simulator
@@ -22,29 +22,46 @@ Basic reference
 
 <b>Common between iOs & Android:</b>
 
-isConnected	: Test connection status
-isSmartPhone	: Seems obvious
-getSystem_lang	: return the system language code
+- isConnected : Test connection status
+
+- isSmartPhone : Smartphone or tablet ?
+
+- getSystem_lang : return the system language code
+
 
 <b>Android:</b>
-show_loading		: show a loading spinner
-hide_loading		: hide the loading spinner
-dismiss_loading
-isWifi			: Test if the device is Wifi connected
-getScreen_bucket	: Return the device screen bucker
-getDensity		: Return the screen density of the device
-wakeLock			: Prevent screen dimming
-lightsOut			: Lights Out mode
-getLocal_IP		: Get the local ip of the device
-openDialog		: Open a native Android Dialog
+
+ - show_loading : show a loading spinner
+   
+ - hide_loading : hide the loading
+   spinner
+   
+ - dismiss_loading : dismiss the spinner
+   
+ - isWifi : Test if the device is Wifi
+   connected
+   
+ - getScreen_bucket : Return the device
+   screen bucker
+   
+ - getDensity : Return the screen
+   density of the device
+   
+ - wakeLock : Prevent screen dimming
+   
+ - lightsOut : Lights Out mode
+   
+ - getLocal_IP  : Get the local ip of the
+   device
+   
+ - openDialog : Open a native Android
+   Dialog
 
 Made at Hyperfiction
 --------------------
 [hyperfiction.fr](http://hyperfiction.fr)
 
-Developed by :
-Johann Martinache
-[@shoe_box](https://twitter.com/shoe_box)
+Developed by : Johann Martinache [@shoe_box](https://twitter.com/shoe_box)
 
 License
 -------
