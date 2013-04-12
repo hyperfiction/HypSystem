@@ -184,7 +184,7 @@ class HypSystem{
 											?fPos		: Void->Void,
 											?fNeg		: Void->Void
 										) : Void{
-			trace('_show_error_dialog ::: '+sText);
+			trace('_show_error_dialog ::: '+sText+" - "+sNeg+" - "+sPos);
 
 			#if android
 				if( sNeg == null && sPos == null )

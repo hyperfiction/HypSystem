@@ -22,6 +22,7 @@ import android.view.View;
 import android.view.ViewGroup.LayoutParams;
 import android.view.Window;
 import android.widget.ProgressBar;
+import android.text.Html;
 
 import java.lang.reflect.Method;
 import java.util.Collections;
@@ -314,27 +315,33 @@ class HypSystem{
 		*/
 		static public void openDialog( String sTitle , String sText , boolean bCancelable ){
 			trace("show_error_dialog ::: "+sText+" - "+bCancelable);
-			final AlertDialog.Builder builder = new AlertDialog.Builder( GameActivity.getContext( ) , 2 );
-           						builder.setMessage( sText );
-           						if( sTitle != "" )
-           							builder.setTitle( sTitle );
-           						builder.setNegativeButton("OK",
-           							new DialogInterface.OnClickListener() {
-						                @Override
-						                public void onClick(DialogInterface dialog, int which) {
-						                     dialog.cancel();
-						                }
-						           }
-						        );
-           GameActivity.getInstance( ).runOnUiThread(
+			final AlertDialog.Builder builder;
+
+			if( android.os.Build.VERSION.SDK_INT>=android.os.Build.VERSION_CODES.ICE_CREAM_SANDWICH ){
+				trace("HOLO DARK");
+				builder = new AlertDialog.Builder( GameActivity.getContext( ) , 2  );
+			}else
+				builder = new AlertDialog.Builder( GameActivity.getContext( ) );
+				builder.setMessage( Html.fromHtml( sText ) );
+
+			if( sTitle != "" )
+				builder.setTitle( sTitle );
+				builder.setNegativeButton("OK", new DialogInterface.OnClickListener() {
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+			 			dialog.cancel();
+					}
+				});
+
+			GameActivity.getInstance( ).runOnUiThread(
 				new Runnable(){
-	                @Override
-	                public void run() {
-	                	AlertDialog alert = builder.create();
-          							alert.show();
-	                }
-		        }
-            );
+					@Override
+					public void run() {
+						AlertDialog alert = builder.create();
+									alert.show();
+					}
+				}
+			);
 		}
 
 		/**
@@ -351,21 +358,26 @@ class HypSystem{
 										final HaxeObject obj_call_back
 									){
 			trace("show_custom_dialog error_msg : "+sText+" | sButtonPos : "+sButtonPos+" | sButtonNeg : "+sButtonNeg);
-			final AlertDialog.Builder 	builder = new AlertDialog.Builder( GameActivity.getContext( ) , 2 );
-									builder.setTitle( sTitle );
-									builder.setMessage( sText );
-									builder.setPositiveButton( sButtonPos , new DialogInterface.OnClickListener() {
-										public void onClick(DialogInterface dialog, int id) {
-											trace("onclick button pos");
-											obj_call_back.callD0("pos");
-										}
-									});
-									builder.setNegativeButton( sButtonNeg , new DialogInterface.OnClickListener() {
-										public void onClick(DialogInterface dialog, int id) {
-											trace("onclick button neg");
-											obj_call_back.callD0("neg");
-										}
-	       							});
+			final AlertDialog.Builder builder;
+			if( android.os.Build.VERSION.SDK_INT>=android.os.Build.VERSION_CODES.ICE_CREAM_SANDWICH ){
+				trace("HOLO DARK");
+				builder = new AlertDialog.Builder( GameActivity.getContext( ) , 2  );
+			}else
+				builder = new AlertDialog.Builder( GameActivity.getContext( ) );
+				builder.setTitle( sTitle );
+				builder.setMessage( Html.fromHtml( sText ) );
+				builder.setPositiveButton( sButtonPos , new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialog, int id) {
+						trace("onclick button pos");
+						obj_call_back.callD0("pos");
+					}
+				});
+				builder.setNegativeButton( sButtonNeg , new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialog, int id) {
+						trace("onclick button neg");
+						obj_call_back.callD0("neg");
+					}
+					});
 
 			GameActivity.getInstance( ).runOnUiThread(
 				new Runnable(){
