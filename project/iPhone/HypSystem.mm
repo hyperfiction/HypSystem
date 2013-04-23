@@ -7,7 +7,7 @@
 #include <netinet/in.h>
 #import <SystemConfiguration/SCNetworkReachability.h>
 #import <SystemConfiguration/SystemConfiguration.h>
-namespace hyperfiction{
+namespace hypsystem{
 
 	bool isConnectedtoInternet( ){
 		// Create zero addy

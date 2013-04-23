@@ -8,9 +8,9 @@
 #include "HypSystem.h"
 #include <stdio.h>
 
-using namespace hyperfiction;
+using namespace hypsystem;
 extern "C"{
-	
+
 	int HypSystem_register_prims(){
 		printf("HypSystem: register_prims()\n");
 		return 0;

@@ -5,14 +5,14 @@
 #include <bps/navigator.h>
 #include <stdlib.h>
 
-namespace hyperfiction{
+namespace hypsystem{
 
 	dialog_instance_t loading_dialog = 0;
 
 	const char* get_system_lang( ) {
 		char* country = NULL;
     	char* language = NULL;
-    	
+
     	locale_get(&language, &country);
 
     	bps_free(country);
@@ -20,12 +20,12 @@ namespace hyperfiction{
 
     	return language;
 	}
-	
+
 	void show_loading(){
 		if( loading_dialog ) {
 			return;
 		}
-	
+
 		if( dialog_create_alert(&loading_dialog) != BPS_SUCCESS ){
 			return;
 		}
@@ -41,14 +41,14 @@ namespace hyperfiction{
 		if( dialog_set_position(loading_dialog, DIALOG_POSITION_MIDDLE_CENTER ) != BPS_SUCCESS ){
 			return;
 		}
-		
+
 		if (dialog_show(loading_dialog) != BPS_SUCCESS) {
 			dialog_destroy(loading_dialog);
 			loading_dialog = 0;
 		}
-	
+
 	}
-	
+
 	void hide_loading(){
 		if(loading_dialog){
 			dialog_destroy(loading_dialog);
@@ -58,11 +58,11 @@ namespace hyperfiction{
 
 	bool LaunchBrowser (const char *inUtf8URL) {
 		char* err = NULL;
-		
+
 		int result = navigator_invoke (inUtf8URL, &err);
-		
+
 		bps_free (err);
-		
+
 		return (result == BPS_SUCCESS);
 	}
 }
