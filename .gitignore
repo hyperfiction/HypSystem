@@ -1,0 +1,10 @@
+[Bb]in*/
+[Ee]xport*/
+.DS_Store
+.build
+*.build
+*.sublime-project
+*.sublime-workspace
+*.hxproj
+obj
+all_objs
