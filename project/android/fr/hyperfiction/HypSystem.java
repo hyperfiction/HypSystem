@@ -24,13 +24,14 @@ import android.view.Window;
 import android.widget.ProgressBar;
 import android.text.Html;
 
+import java.io.IOException;
 import java.lang.reflect.Method;
-import java.util.Collections;
-import java.util.List;
-import java.util.Locale;
 import java.net.InetAddress;
 import java.net.NetworkInterface;
 import java.net.SocketException;
+import java.util.Collections;
+import java.util.List;
+import java.util.Locale;
 import org.apache.http.conn.util.InetAddressUtils;
 
 import org.haxe.nme.GameActivity;
@@ -43,7 +44,7 @@ import org.haxe.nme.HaxeObject;
 
 class HypSystem{
 
-	private static String TAG = "HypSystem";
+	private static String TAG = "trace";
 
 
 	private static LoadingDialog dialog_progress;
@@ -184,11 +185,10 @@ class HypSystem{
 					sRes = "xhdpi";
 					break;
 
-				/*
 				case DisplayMetrics.DENSITY_XXHIGH :
 					sRes = "xxhdpi";
 					break;
-				*/
+
 			}
 
 			return sRes;
@@ -211,13 +211,23 @@ class HypSystem{
 		* @return	void
 		*/
 		static public void show_loading( ){
+			trace("show_loading");
 			GameActivity.getInstance( ).runOnUiThread(
 				new Runnable(){
 	                @Override
 	                public void run() {
-	                	if( dialog_progress == null )
-	                    	dialog_progress = new LoadingDialog( GameActivity.getContext( ) );
+
+	                	try{
+						if( dialog_progress == null )
+	                    		dialog_progress = new LoadingDialog( GameActivity.getContext( ) );
 							dialog_progress.show( );
+
+					} catch( Exception e) {
+						trace( "Exception in show_loading");
+						e.printStackTrace();
+					}
+
+
 	                }
 		        }
             );
@@ -235,8 +245,13 @@ class HypSystem{
 				new Runnable(){
 	                @Override
 	                public void run() {
-	                	if( dialog_progress != null )
-	                    	dialog_progress.hide( );
+	                	try{
+						if( dialog_progress != null )
+	                    		dialog_progress.hide( );
+					} catch( Exception e) {
+						trace( "Exception in hide_loading");
+						e.printStackTrace();
+					}
 	                }
 		        }
             );
@@ -299,9 +314,14 @@ class HypSystem{
 				new Runnable(){
 	                @Override
 	                public void run() {
-	                	if( dialog_progress != null )
-	                    	dialog_progress.dismiss( );
-	                    	dialog_progress = null;
+	                	try{
+						if( dialog_progress != null )
+	                    		dialog_progress.dismiss( );
+	                    		dialog_progress = null;
+					} catch( Exception e) {
+						trace( "Exception in dismiss_loading");
+						e.printStackTrace();
+					}
 	                }
 		        }
             );
@@ -337,8 +357,13 @@ class HypSystem{
 				new Runnable(){
 					@Override
 					public void run() {
-						AlertDialog alert = builder.create();
-									alert.show();
+						try{
+							AlertDialog 	alert = builder.create();
+										alert.show();
+						} catch( Exception e) {
+							trace( "Exception in openDialog" );
+							e.printStackTrace();
+						}
 					}
 				}
 			);
@@ -383,8 +408,13 @@ class HypSystem{
 				new Runnable(){
 	                @Override
 	                public void run() {
-	                	AlertDialog 	alert = builder.create();
-          						alert.show();
+	                	try{
+						AlertDialog 	alert = builder.create();
+									alert.show();
+					} catch( Exception e) {
+						trace( "Exception in openCustomDialog" );
+						e.printStackTrace();
+					}
 	                }
 		        }
             );
@@ -448,7 +478,8 @@ class HypSystem{
 	        mView.setOnSystemUiVisibilityChangeListener(new View.OnSystemUiVisibilityChangeListener() {
 	            @Override
 	            public void onSystemUiVisibilityChange(int visibility) {
-	                if (visibility != View.STATUS_BAR_VISIBLE ) {
+	            	trace("onSystemUiVisibilityChange ::: "+visibility);
+	                if (visibility != View.SYSTEM_UI_FLAG_LOW_PROFILE  ) {
 	                    delay();
 	                }
 	            }
@@ -457,8 +488,12 @@ class HypSystem{
 
 	    private void hideSystemUi() {
 	    		trace("hideSystemUi");
-	        	mView.setSystemUiVisibility(View.STATUS_BAR_VISIBLE );
-	    		GameActivity.getInstance( ).getWindow().getDecorView().setSystemUiVisibility(View.STATUS_BAR_VISIBLE );
+	        	//mView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LOW_PROFILE  );
+	    		//GameActivity.getInstance( ).getWindow().getDecorView().setSystemUiVisibility( View.SYSTEM_UI_FLAG_LOW_PROFILE );
+	    		GameActivity.getInstance( ).getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                    | View.SYSTEM_UI_FLAG_FULLSCREEN
+                    | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                    | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
 	    }
 
 	    private Runnable mHideRunnable = new Runnable() {
