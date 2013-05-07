@@ -7,6 +7,8 @@ import cpp.Lib;
 import neko.Lib;
 #end
 
+import org.haxe.nme.HaxeObject;
+
 /**
 * ...
 * @author shoe[box]
@@ -337,6 +339,7 @@ class PopupCallBack extends HaxeObject{
 		* @return	void
 		*/
 		public function new( fPos : Void->Void , fNeg : Void->Void ) {
+			super( );
 			this.fPos = fPos;
 			this.fNeg = fNeg;
 		}
@@ -371,7 +374,3 @@ class PopupCallBack extends HaxeObject{
 
 }
 #end
-
-class HaxeObject{
-
-}
