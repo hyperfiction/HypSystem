@@ -23,6 +23,7 @@ import android.view.ViewGroup.LayoutParams;
 import android.view.Window;
 import android.widget.ProgressBar;
 import android.text.Html;
+import android.content.pm.ActivityInfo;
 
 import java.io.IOException;
 import java.lang.reflect.Method;
@@ -435,6 +436,27 @@ class HypSystem{
 		*/
 		static public String getSystem_lang( ){
 			return Locale.getDefault().getLanguage();
+		}
+
+		/**
+		*
+		*
+		* @public
+		* @return	void
+		*/
+		static public void setFixed_orientation( int orientation ){
+			trace("setFixed_orientation ::: "+orientation);
+			switch( orientation ){
+
+				case 0:
+					GameActivity.getInstance( ).setRequestedOrientation( ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE );
+
+				case 1:
+					GameActivity.getInstance( ).setRequestedOrientation( ActivityInfo.SCREEN_ORIENTATION_PORTRAIT );
+
+
+			}
+
 		}
 
 
