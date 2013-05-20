@@ -267,13 +267,19 @@ class HypSystem{
 			trace("wavelock ::: "+iDelay);
 			PowerManager pm = (PowerManager) GameActivity.getInstance( ).getSystemService(Context.POWER_SERVICE);
 
-			PowerManager.WakeLock 	wakeLock = pm.newWakeLock( pm.FULL_WAKE_LOCK , "HypWave_lock" );
-								wakeLock.acquire( iDelay );
+			PowerManager.WakeLock	wakeLock = pm.newWakeLock( pm.FULL_WAKE_LOCK , "HypWave_lock" );
+			if( iDelay == 0 ) {
+				wakeLock.acquire( );
+			} else {
+				wakeLock.acquire( iDelay );
+			}
+		}
 
+		static public void keepScreen_on( ) {
 			GameActivity.getInstance( ).runOnUiThread(
 				new Runnable(){
 	                @Override
-	                	public void run() {
+						public void run() {
 						GameActivity.getInstance( ).getWindow( ).addFlags( android.view.WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 					}
 

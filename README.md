@@ -32,28 +32,30 @@ Basic reference
 <b>Android:</b>
 
  - show_loading : show a loading spinner
-   
+
  - hide_loading : hide the loading
    spinner
-   
+
  - dismiss_loading : dismiss the spinner
-   
+
  - isWifi : Test if the device is Wifi
    connected
-   
+
  - getScreen_bucket : Return the device
    screen bucker
-   
+
  - getDensity : Return the screen
    density of the device
-   
- - wakeLock : Prevent screen dimming
-   
+
+ - wakeLock : Acquire a FULL_WAKE_LOCK
+
+ - keepScreen_on : Prevent screen dimming
+
  - lightsOut : Lights Out mode
-   
+
  - getLocal_IP  : Get the local ip of the
    device
-   
+
  - openDialog : Open a native Android
    Dialog
 
