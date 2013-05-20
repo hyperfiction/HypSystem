@@ -300,6 +300,15 @@ class HypSystem{
 		* @return	void
 		*/
 		@JNI
+		static public function keepScreen_on( ) : Void {}
+
+		/**
+		*
+		*
+		* @public
+		* @return	void
+		*/
+		@JNI
 		static public function getLocal_IP( ) : String {}
 
 		/**
