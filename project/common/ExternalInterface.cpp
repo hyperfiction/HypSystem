@@ -65,4 +65,9 @@ extern "C"{
 	}
 	DEFINE_PRIM( HypSystem_get_system_lang , 0 );
 
+	static value HypSystem_get_uuid( ){
+		return alloc_string( get_uuid( ) );
+	}
+	DEFINE_PRIM( HypSystem_get_uuid , 0 );
+
 #endif

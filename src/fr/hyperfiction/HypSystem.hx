@@ -72,6 +72,14 @@ class HypSystem{
 			return false;
 		}
 
+		#if ios
+		@CPP("HypSystem", "HypSystem_get_uuid")
+		#end
+		#if android
+		@JNI
+		#end
+		static public function getUuid( ) : String {}
+
 		/**
 		*
 		*
