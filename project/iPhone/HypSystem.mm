@@ -60,6 +60,7 @@ namespace hypsystem{
 	const char* get_uuid( ) {
 		//Generate get a UUID
 		NSString *bundleName = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleName"];
+		bundleName = [bundleName stringByAppendingString:@".unique"];
 		NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 		NSString *identifierString = [defaults objectForKey:bundleName];
 
