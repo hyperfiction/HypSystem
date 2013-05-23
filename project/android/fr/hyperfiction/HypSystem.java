@@ -481,7 +481,7 @@ class HypSystem{
 		* @return	void
 		*/
 		public LoadingDialog( final Context context ){
-			super( context , R.style.CustomDialogTheme );
+			super( context , R.style.HypSystemDialogTheme );
 
 			addContentView( pb = new ProgressBar( GameActivity.getContext( ) ) ,  new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));
 
