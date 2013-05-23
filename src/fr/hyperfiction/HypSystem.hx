@@ -78,7 +78,9 @@ class HypSystem{
 		#if android
 		@JNI
 		#end
-		static public function getUuid( ) : String {}
+		static public function getUuid( ) : String {
+			return "";
+		}
 
 		/**
 		*
