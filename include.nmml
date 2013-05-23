@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project>
-	
-	<!-- misc --> 
+
+	<!-- misc -->
 		<ndll name="HypSystem" if="ios"/>
 		<ndll name="HypSystem" if="blackberry"/>
 		<classpath name="src" />
 
 	<!-- Android -->
 		<java path="project/android" if="android" />
+		<templates path="templates/android/res" rename="res" if="android" />
 
-		<dependency name="SystemConfiguration.framework" if="ios" />		
+	<!-- iOS -->
+		<dependency name="SystemConfiguration.framework" if="ios" />
 
 </project>

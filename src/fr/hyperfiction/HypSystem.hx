@@ -224,6 +224,18 @@ class HypSystem{
 		#end
 		private static function openDialog( sTitle : String , sText : String , bCancelable : Bool ) : Void{}
 
+		/**
+		*
+		*
+		* @public
+		* @return	void
+		*/
+		#if android
+		@JNI
+		#end
+		static public function setFixed_orientation( i : Int ) : Void {
+
+		}
 
 	// -------o protected
 

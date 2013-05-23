@@ -27,6 +27,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.provider.Settings.Secure;
+import android.content.pm.ActivityInfo;
 
 import java.io.IOException;
 import java.lang.reflect.Method;
@@ -455,6 +456,27 @@ class HypSystem{
 			return uniqueID;
 		}
 
+		/**
+		*
+		*
+		* @public
+		* @return	void
+		*/
+		static public void setFixed_orientation( int orientation ){
+			trace("setFixed_orientation ::: "+orientation);
+			switch( orientation ){
+
+				case 0:
+					GameActivity.getInstance( ).setRequestedOrientation( ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE );
+
+				case 1:
+					GameActivity.getInstance( ).setRequestedOrientation( ActivityInfo.SCREEN_ORIENTATION_PORTRAIT );
+
+
+			}
+
+		}
+
 
 	// -------o protected
 
@@ -477,7 +499,7 @@ class HypSystem{
 		* @return	void
 		*/
 		public LoadingDialog( final Context context ){
-			super( context , R.style.CustomDialogTheme );
+			super( context , R.style.HypSystemDialogTheme );
 
 			addContentView( pb = new ProgressBar( GameActivity.getContext( ) ) ,  new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));
 
