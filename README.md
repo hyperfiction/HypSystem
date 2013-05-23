@@ -28,6 +28,7 @@ Basic reference
 
 - getSystem_lang : return the system language code
 
+- getUuid: return an UUID. It's random generated and store in user prefs, so it's unique for each installation.
 
 <b>Android:</b>
 
