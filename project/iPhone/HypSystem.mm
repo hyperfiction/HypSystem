@@ -57,6 +57,27 @@ namespace hypsystem{
 		return [[UIScreen mainScreen] bounds].size.height * fScl;
 	}
 
+	const char* get_uuid( ) {
+		//Generate get a UUID
+		NSString *bundleName = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleName"];
+		NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+		NSString *identifierString = [defaults objectForKey:bundleName];
+
+		if( identifierString == nil ) {
+			// Generate UDID
+			CFUUIDRef identifierObject = CFUUIDCreate(kCFAllocatorDefault);
+
+			// Convert the CFUUID to a string
+			NSString *identifierString = (__bridge_transfer NSString *)CFUUIDCreateString(kCFAllocatorDefault, identifierObject);
+			CFRelease((CFTypeRef) identifierObject);
+
+			NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+			[defaults setObject:identifierString forKey:bundleName];
+			[defaults synchronize];
+		}
+		return [identifierString UTF8String];
+	}
+
 	const char* get_system_lang( ){
 		return [[[NSLocale preferredLanguages] objectAtIndex:0] UTF8String];
 	}

@@ -23,6 +23,10 @@ import android.view.ViewGroup.LayoutParams;
 import android.view.Window;
 import android.widget.ProgressBar;
 import android.text.Html;
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
+import android.provider.Settings.Secure;
 
 import java.io.IOException;
 import java.lang.reflect.Method;
@@ -32,6 +36,7 @@ import java.net.SocketException;
 import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
+import java.util.UUID;
 import org.apache.http.conn.util.InetAddressUtils;
 
 import org.haxe.nme.GameActivity;
@@ -435,6 +440,19 @@ class HypSystem{
 		*/
 		static public String getSystem_lang( ){
 			return Locale.getDefault().getLanguage();
+		}
+
+		static public String getUuid( ) {
+			String UNIQUE_ID = "::APP_PACKAGE::.unique";
+	        SharedPreferences sharedPrefs = GameActivity.getInstance( ).getSharedPreferences( UNIQUE_ID, Context.MODE_PRIVATE);
+	        String uniqueID = sharedPrefs.getString(UNIQUE_ID, null);
+	        if (uniqueID == null) {
+	            uniqueID = UUID.randomUUID().toString();
+	            Editor editor = sharedPrefs.edit();
+	            editor.putString(UNIQUE_ID, uniqueID);
+	            editor.commit();
+	        }
+			return uniqueID;
 		}
 
 
