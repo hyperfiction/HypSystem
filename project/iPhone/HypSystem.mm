@@ -35,6 +35,21 @@ namespace hypsystem{
 
 	}
 
+	void openDialog( const char *sTitle , const char *sMessage , const char *sButton ){
+		NSString *NSTitle	= [ [NSString alloc] initWithUTF8String:sTitle ];
+		NSString *NSMessage	= [ [NSString alloc] initWithUTF8String:sMessage ];
+		NSString *NSBtn	= [ [NSString alloc] initWithUTF8String:sButton ];
+		UIAlertView *dialog = [[UIAlertView alloc]
+							initWithTitle		: NSTitle
+							message			: NSMessage
+							delegate			: nil
+							cancelButtonTitle	: NSBtn
+							otherButtonTitles	: nil
+						];
+		[dialog show];
+		[dialog release];
+	}
+
 	bool isiPhone( ){
 		return (UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPhone);
 	}

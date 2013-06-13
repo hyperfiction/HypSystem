@@ -10,6 +10,7 @@ namespace hypsystem{
 	int get_screen_width( );
 	const char* get_system_lang( );
 	const char* get_uuid( );
+	void openDialog( const char *sTitle , const char *sMessage , const char *sButton );
 
 	#ifdef BLACKBERRY
 		void show_loading( );

@@ -70,4 +70,14 @@ extern "C"{
 	}
 	DEFINE_PRIM( HypSystem_get_uuid , 0 );
 
+	static value HypSystem_dialog( value sTitle , value sText , value sButton ){
+		openDialog(
+					val_string( sTitle ),
+					val_string( sText ),
+					val_string( sButton )
+				);
+		return alloc_null( );
+	}
+	DEFINE_PRIM( HypSystem_dialog , 3 );
+
 #endif

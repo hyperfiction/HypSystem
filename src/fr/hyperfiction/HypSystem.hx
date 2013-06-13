@@ -88,6 +88,9 @@ class HypSystem{
 		* @public
 		* @return	void
 		*/
+		#if ios
+		@CPP("HypSystem", "HypSystem_dialog")
+		#end
 		static public function dialog(
 											sTitle		: String,
 											sText		: String
@@ -97,6 +100,9 @@ class HypSystem{
 											?sPos		: String ,
 											?fPos		: Void->Void,
 											?fNeg		: Void->Void
+											#end
+											#if ios
+											,sButton : String
 											#end
 										) : Void {
 			#if android
