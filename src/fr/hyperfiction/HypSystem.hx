@@ -147,7 +147,7 @@ class HypSystem{
 		#if android
 		@JNI
 		#end
-		static public function show_loading( ) : Void {
+		static public function show_loading( bCancelable : Bool = true ) : Void {
 			#if blackberry
 			hyp_show_loading();
 			#end
@@ -240,6 +240,9 @@ class HypSystem{
 		*/
 		#if android
 		@JNI
+		#end
+		#if ios
+		@CPP("HypSystem","HypSystem_setOrientation")
 		#end
 		static public function setFixed_orientation( i : Int ) : Void {
 

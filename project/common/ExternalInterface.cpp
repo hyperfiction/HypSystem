@@ -80,4 +80,10 @@ extern "C"{
 	}
 	DEFINE_PRIM( HypSystem_dialog , 3 );
 
+	static value HypSystem_setOrientation( value o ){
+		setOrientation( val_int( o ) );
+		return alloc_null( );
+	}
+	DEFINE_PRIM( HypSystem_setOrientation , 1 );
+
 #endif

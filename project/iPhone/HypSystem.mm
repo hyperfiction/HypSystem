@@ -98,4 +98,11 @@ namespace hypsystem{
 		return [[[NSLocale preferredLanguages] objectAtIndex:0] UTF8String];
 	}
 
+    void setOrientation( int o ){
+    		printf("setOrientation\n" );
+		[[UIApplication sharedApplication] setStatusBarOrientation:UIDeviceOrientationPortrait animated:NO];
+		[[UIDevice currentDevice] setOrientation:UIDeviceOrientationPortrait];
+    	}
+        //
+
 }

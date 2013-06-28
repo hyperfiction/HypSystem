@@ -216,7 +216,7 @@ class HypSystem{
 		* @public
 		* @return	void
 		*/
-		static public void show_loading( ){
+		static public void show_loading( final boolean bCancelable ){
 			trace("show_loading");
 			GameActivity.getInstance( ).runOnUiThread(
 				new Runnable(){
@@ -225,7 +225,7 @@ class HypSystem{
 
 	                	try{
 						if( dialog_progress == null )
-	                    		dialog_progress = new LoadingDialog( GameActivity.getContext( ) );
+	                    		dialog_progress = new LoadingDialog( GameActivity.getContext( ) , bCancelable );
 							dialog_progress.show( );
 
 					} catch( Exception e) {
@@ -301,6 +301,11 @@ class HypSystem{
 		*/
 		static public void lightsOut( ){
 			trace("lightsOut :: "+uiHider);
+
+			if( android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.HONEYCOMB )
+               	GameActivity.getMainView( ).setSystemUiVisibility(View.SYSTEM_UI_FLAG_LOW_PROFILE);
+
+               /*
 			GameActivity.getInstance( ).runOnUiThread(
 				new Runnable(){
 				@Override
@@ -311,7 +316,7 @@ class HypSystem{
 					}
 				}
 			);
-
+			*/
 		}
 
 		/**
@@ -491,6 +496,7 @@ class HypSystem{
 	static class LoadingDialog extends Dialog{
 
 		ProgressBar pb;
+		Boolean bCancelable;
 
 		/**
 		*
@@ -498,12 +504,23 @@ class HypSystem{
 		* @public
 		* @return	void
 		*/
-		public LoadingDialog( final Context context ){
+		public LoadingDialog( final Context context , boolean b ){
 			super( context , R.style.HypSystemDialogTheme );
-
+			bCancelable = b;
 			addContentView( pb = new ProgressBar( GameActivity.getContext( ) ) ,  new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));
 
 			//getWindow().setBackgroundDrawableResource(R.color.bg_tran);
+		}
+
+		/**
+		*
+		*
+		* @public
+		* @return	void
+		*/
+		public void onBackPressed( ){
+			if( bCancelable )
+				super.onBackPressed( );
 		}
 	}
 
@@ -536,10 +553,7 @@ class HypSystem{
 	    		trace("hideSystemUi");
 	        	//mView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LOW_PROFILE  );
 	    		//GameActivity.getInstance( ).getWindow().getDecorView().setSystemUiVisibility( View.SYSTEM_UI_FLAG_LOW_PROFILE );
-	    		GameActivity.getInstance( ).getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                    | View.SYSTEM_UI_FLAG_FULLSCREEN
-                    | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                    | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
+	    		GameActivity.getInstance( ).getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LOW_PROFILE );
 	    }
 
 	    private Runnable mHideRunnable = new Runnable() {
