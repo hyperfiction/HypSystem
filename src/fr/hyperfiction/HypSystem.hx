@@ -248,6 +248,19 @@ class HypSystem{
 
 		}
 
+		/**
+		*
+		*
+		* @public
+		* @return	void
+		*/
+		#if android
+		@JNI
+		#end
+		static public function reportError( sClass_name : String , sMessage : String , sStack : String ) : Void {
+
+		}
+
 	// -------o protected
 
 	// -------o iOS

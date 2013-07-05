@@ -4,6 +4,7 @@ import ::APP_PACKAGE::.R;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.app.ApplicationErrorReport;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface.OnClickListener;
@@ -15,6 +16,7 @@ import android.net.NetworkInfo;
 import android.os.Build.VERSION_CODES;
 import android.os.Build;
 import android.os.Handler;
+import android.content.Intent;
 import android.os.PowerManager;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -37,6 +39,8 @@ import java.net.SocketException;
 import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
+import java.io.PrintWriter;
+import java.io.StringWriter;
 import java.util.UUID;
 import org.apache.http.conn.util.InetAddressUtils;
 
@@ -50,7 +54,7 @@ import org.haxe.nme.HaxeObject;
 
 class HypSystem{
 
-	private static String TAG = "trace";
+	private static String TAG = "HypSystem";
 
 
 	private static LoadingDialog dialog_progress;
@@ -287,6 +291,7 @@ class HypSystem{
 	                @Override
 						public void run() {
 						GameActivity.getInstance( ).getWindow( ).addFlags( android.view.WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+						GameActivity.getInstance( ).getMainView( ).setKeepScreenOn( true );
 					}
 
 				}
@@ -479,6 +484,63 @@ class HypSystem{
 
 
 			}
+
+		}
+
+		/**
+		*
+		*
+		* @public
+		* @return	void
+		*/
+		static public void reportError( String sClass_name , String sMessage , String sStack ){
+			trace("reportError ::: "+sClass_name+" - "+sMessage+" - "+sStack);
+			ApplicationErrorReport.CrashInfo 	crash = new ApplicationErrorReport.CrashInfo();
+										crash.exceptionClassName	= sClass_name;
+										crash.exceptionMessage	= sMessage;
+										crash.stackTrace		= sStack;
+										crash.throwClassName	= sClass_name;
+										crash.throwFileName		= sClass_name;
+										//crash.throwLineNumber	= iLine;
+
+			ApplicationErrorReport 	report = new ApplicationErrorReport();
+								report.packageName	= report.processName = GameActivity.getInstance( ).getApplication().getPackageName();
+								report.time		= System.currentTimeMillis();
+								report.type		= ApplicationErrorReport.TYPE_CRASH;
+								report.systemApp	= false;
+								report.crashInfo	= crash;
+
+			final Intent 	intent = new Intent(Intent.ACTION_APP_ERROR);
+						intent.putExtra(Intent.EXTRA_BUG_REPORT, report);
+
+			GameActivity.getInstance( ).runOnUiThread(
+				new Runnable( ) {
+					public void run() {
+						GameActivity.getInstance( ).startActivity(intent);
+					}
+				});
+
+		}
+
+		/**
+		*
+		*
+		* @public
+		* @return	void
+		*/
+		static public void email( String sSubject , String sMessage , String sTo ){
+			final Intent 	email = new Intent(Intent.ACTION_SEND);
+						email.putExtra(Intent.EXTRA_EMAIL, new String[]{sTo});
+						email.putExtra(Intent.EXTRA_SUBJECT, sSubject);
+						email.putExtra(Intent.EXTRA_TEXT,sMessage);
+
+						email.setType("message/rfc822");
+			GameActivity.getInstance( ).runOnUiThread(
+				new Runnable( ) {
+					public void run() {
+						GameActivity.getInstance( ).startActivity(Intent.createChooser(email, "Choose an Email client :"));
+					}
+				});
 
 		}
 
