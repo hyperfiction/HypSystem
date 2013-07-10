@@ -1,6 +1,6 @@
 package fr.hyperfiction;
 
-import nme.JNI;
+
 #if cpp
 import cpp.Lib;
 #elseif neko
@@ -13,7 +13,7 @@ import org.haxe.nme.HaxeObject;
 * ...
 * @author shoe[box]
 */
-@:build( org.shoebox.utils.NativeMirror.build( ) )
+@:build( ShortCuts.mirrors( ) )
 class HypSystem{
 
 	#if blackberry

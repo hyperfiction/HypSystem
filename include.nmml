@@ -6,9 +6,11 @@
 		<ndll name="HypSystem" if="blackberry"/>
 		<classpath name="src" />
 
+		<templatePath name="templates" />
+
 	<!-- Android -->
 		<java path="project/android" if="android" />
-		<template path="/templates/android/res" rename="res" if="android" />
+		<!--<template path="/templates/android/res" rename="res" if="android" />-->
 
 	<!-- iOS -->
 		<dependency name="SystemConfiguration.framework" if="ios" />
