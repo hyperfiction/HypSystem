@@ -1,0 +1,12 @@
+{
+  "name": "hypsystem",
+  "url": "https://github.com/hyperfiction/hypsystem",
+  "license": "BSD",
+  "tags": ["hyperfiction", "system", "cpp", "cross", "openfl"],
+  "description": "An OpenFL native extension with tools for iOS, Android and Blackberry",
+  "version": "2.0.0",
+  "releasenote": "Haxe3 and OpenFl compatibility",
+  "contributors": ["shoe[box]","louisbl"],
+  "dependencies": {
+  }
+}

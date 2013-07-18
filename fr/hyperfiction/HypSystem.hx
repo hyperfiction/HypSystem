@@ -17,10 +17,10 @@ import org.haxe.nme.HaxeObject;
 class HypSystem{
 
 	#if blackberry
-	private static var hyp_show_loading	= Lib.load( "HypSystem" , "HypSystem_show_loading"  , 0 );
-	private static var hyp_hide_loading	= Lib.load( "HypSystem" , "HypSystem_hide_loading"  , 0 );
-	private static var hyp_system_lang		= Lib.load( "HypSystem" , "HypSystem_get_system_lang" , 0 );
-	private static var hyp_launch_browser	= Lib.load( "HypSystem" , "HypSystem_launch_browser" , 1 );
+	private static var hyp_show_loading  	= Lib.load( "hypsystem" , "hypsystem_show_loading"  , 0 );
+	private static var hyp_hide_loading  	= Lib.load( "hypsystem" , "hypsystem_hide_loading"  , 0 );
+	private static var hyp_system_lang   	= Lib.load( "hypsystem" , "hypsystem_get_system_lang" , 0 );
+	private static var hyp_launch_browser	= Lib.load( "hypsystem" , "hypsystem_launch_browser" , 1 );
 	#end
 
 	// -------o constructor
@@ -47,7 +47,7 @@ class HypSystem{
 		@JNI
 		#end
 		#if ios
-		@CPP("HypSystem","HypSystem_isConnectedtoInternet")
+		@CPP("hypsystem","hypsystem_isConnectedtoInternet")
 		#end
 		static public function isConnected( ) : Bool {
 			return true;
@@ -62,7 +62,7 @@ class HypSystem{
 		* @return	void
 		*/
 		#if ios
-		@CPP("HypSystem","HypSystem_isIphone")
+		@CPP("hypsystem","hypsystem_isIphone")
 		#end
 
 		#if android
@@ -73,7 +73,7 @@ class HypSystem{
 		}
 
 		#if ios
-		@CPP("HypSystem", "HypSystem_get_uuid")
+		@CPP("hypsystem", "hypsystem_get_uuid")
 		#end
 		#if android
 		@JNI
@@ -89,17 +89,17 @@ class HypSystem{
 		* @return	void
 		*/
 		#if ios
-		@CPP("HypSystem", "HypSystem_dialog")
+		@CPP("hypsystem", "hypsystem_dialog")
 		#end
 		static public function dialog(
-											sTitle		: String,
-											sText		: String
-											#if android	,
+											sTitle      		: String,
+											sText       		: String
+											#if android 	,
 											?bCancelable	: Bool,
-											?sNeg		: String ,
-											?sPos		: String ,
-											?fPos		: Void->Void,
-											?fNeg		: Void->Void
+											?sNeg       		: String ,
+											?sPos       		: String ,
+											?fPos       		: Void->Void,
+											?fNeg       		: Void->Void
 											#end
 											#if ios
 											,sButton : String
@@ -120,7 +120,7 @@ class HypSystem{
 		@JNI
 		#end
 		#if ios
-		@CPP( "HypSystem" , "HypSystem_get_system_lang" )
+		@CPP( "hypsystem" , "hypsystem_get_system_lang" )
 		#end
 		static public function getSystem_lang( ) : String {
 
@@ -242,7 +242,7 @@ class HypSystem{
 		@JNI
 		#end
 		#if ios
-		@CPP("HypSystem","HypSystem_setOrientation")
+		@CPP("hypsystem","hypsystem_setOrientation")
 		#end
 		static public function setFixed_orientation( i : Int ) : Void {
 
@@ -273,7 +273,7 @@ class HypSystem{
 		* @public
 		* @return	void
 		*/
-		@CPP("HypSystem","HypSystem_screen_width")
+		@CPP("hypsystem","hypsystem_screen_width")
 		static public function get_screen_width( ) : Int {
 			return hyp_webview_screen_w( );
 		}
@@ -284,7 +284,7 @@ class HypSystem{
 		* @public
 		* @return	void
 		*/
-		@CPP("HypSystem","HypSystem_screen_height")
+		@CPP("hypsystem","hypsystem_screen_height")
 		static public function get_screen_height( ) : Int {
 			return hyp_webview_screen_h( );
 		}

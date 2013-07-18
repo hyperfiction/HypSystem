@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project>
 
+	<haxelib name="inthebox-macros" />
+
 	<!-- misc -->
-		<ndll name="HypSystem" if="ios"/>
-		<ndll name="HypSystem" if="blackberry"/>
-		<classpath name="src" />
+		<ndll name="hypsystem" if="ios"/>
+		<ndll name="hypsystem" if="blackberry"/>
 
 		<templatePath name="templates" />
 
 	<!-- Android -->
 		<java path="project/android" if="android" />
-		<!--<template path="/templates/android/res" rename="res" if="android" />-->
 
 	<!-- iOS -->
 		<dependency name="SystemConfiguration.framework" if="ios" />

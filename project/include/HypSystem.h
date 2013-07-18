@@ -1,6 +1,5 @@
-#ifndef Device
-
-#define Device
+#ifndef HYPSYSTEM_H
+#define HYPSYSTEM_H
 
 namespace hypsystem{
 
