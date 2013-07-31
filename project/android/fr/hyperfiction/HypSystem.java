@@ -291,7 +291,8 @@ class HypSystem{
 	                @Override
 						public void run() {
 						GameActivity.getInstance( ).getWindow( ).addFlags( android.view.WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-						GameActivity.getInstance( ).getMainView( ).setKeepScreenOn( true );
+						View mainView =	(View) GameActivity.getMainView( );
+						mainView.setKeepScreenOn( true );
 					}
 
 				}
@@ -307,8 +308,10 @@ class HypSystem{
 		static public void lightsOut( ){
 			trace("lightsOut :: "+uiHider);
 
-			if( android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.HONEYCOMB )
-               	GameActivity.getMainView( ).setSystemUiVisibility(View.SYSTEM_UI_FLAG_LOW_PROFILE);
+			if( android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.HONEYCOMB ){
+				View mainView =	(View) GameActivity.getMainView( );
+				mainView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LOW_PROFILE);
+			}
 
                /*
 			GameActivity.getInstance( ).runOnUiThread(
