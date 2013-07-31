@@ -47,7 +47,7 @@ namespace hypsystem{
 							otherButtonTitles	: nil
 						];
 		[dialog show];
-		[dialog release];
+		// [dialog release];
 	}
 
 	bool isiPhone( ){
@@ -99,10 +99,10 @@ namespace hypsystem{
 	}
 
     void setOrientation( int o ){
-    		printf("setOrientation\n" );
-		[[UIApplication sharedApplication] setStatusBarOrientation:UIDeviceOrientationPortrait animated:NO];
-		[[UIDevice currentDevice] setOrientation:UIDeviceOrientationPortrait];
-    	}
+		printf("setOrientation - **does nothing** \n" );
+		// [[UIApplication sharedApplication] setStatusBarOrientation:UIDeviceOrientationPortrait animated:NO];
+		// [[UIDevice currentDevice] setOrientation:UIDeviceOrientationPortrait];
+	}
         //
 
 }
