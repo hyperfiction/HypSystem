@@ -8,6 +8,7 @@ import neko.Lib;
 #end
 
 import org.haxe.nme.HaxeObject;
+import org.shoebox.net.HTTPService;
 
 /**
 * ...
@@ -36,6 +37,26 @@ class HypSystem{
 		}
 
 	// -------o public
+
+		#if mobile
+
+		/**
+		*
+		*
+		* @public
+		* @return	void
+		*/
+		#if android
+		@JNI
+		#end
+		#if ios
+		@CPP("HypSystem","HypSystem_getGMT_offset")
+		#end
+		static public function getGMT_offset( ) : Int {
+
+		}
+
+		#end
 
 		/**
 		*
@@ -255,9 +276,15 @@ class HypSystem{
 		* @return	void
 		*/
 		#if android
-		@JNI
+		//@JNI
 		#end
 		static public function reportError( sClass_name : String , sMessage : String , sStack : String ) : Void {
+
+			var h : HTTPService = new HTTPService( POST );
+				h.addVariable("entry.817084788",sClass_name);
+				h.addVariable("entry.1358676522",sMessage);
+				h.addVariable("entry.403085838",sStack);
+				h.load( new nme.net.URLRequest( "https://docs.google.com/forms/d/1KIEjev_wIRmys1wiu6NAbe3RDWWvQ1j4UFDr3wQpi0s/formResponse" ) );
 
 		}
 

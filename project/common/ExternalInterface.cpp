@@ -86,4 +86,9 @@ extern "C"{
 	}
 	DEFINE_PRIM( HypSystem_setOrientation , 1 );
 
+	static value HypSystem_getGMT_offset( ){
+		return alloc_int( getGMT_offset( ) );
+	}
+	DEFINE_PRIM( HypSystem_getGMT_offset , 0 );
+
 #endif

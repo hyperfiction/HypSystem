@@ -32,6 +32,8 @@ import android.provider.Settings.Secure;
 import android.content.pm.ActivityInfo;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.StringWriter;
 import java.lang.reflect.Method;
 import java.net.InetAddress;
 import java.net.NetworkInterface;
@@ -39,9 +41,9 @@ import java.net.SocketException;
 import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
-import java.io.PrintWriter;
-import java.io.StringWriter;
+import java.util.TimeZone;
 import java.util.UUID;
+
 import org.apache.http.conn.util.InetAddressUtils;
 
 import org.haxe.nme.GameActivity;
@@ -75,6 +77,24 @@ class HypSystem{
 		}
 
 	// -------o public
+
+		/**
+		*
+		*
+		* @public
+		* @return	void
+		*/
+		static public int getGMT_offset( ){
+
+			TimeZone tz = TimeZone.getDefault( );
+
+			int offset = tz.getRawOffset( );
+				offset = (offset / (1000 * 60 * 60)) % 24;
+			if( tz.useDaylightTime( ) )
+				offset += 1;
+
+			return offset;
+		}
 
 		/**
 		*
@@ -472,17 +492,15 @@ class HypSystem{
 		* @public
 		* @return	void
 		*/
-		static public void setFixed_orientation( int orientation ){
-			trace("setFixed_orientation ::: "+orientation);
-			switch( orientation ){
+		static public void setFixed_orientation( int o ){
+			trace("setFixed_orientation ::: "+o);
 
-				case 0:
-					GameActivity.getInstance( ).setRequestedOrientation( ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE );
-
-				case 1:
-					GameActivity.getInstance( ).setRequestedOrientation( ActivityInfo.SCREEN_ORIENTATION_PORTRAIT );
-
-
+			if( o == 0 ){
+				trace("><< landscape");
+				GameActivity.getInstance( ).setRequestedOrientation( ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE );
+			}else{
+				trace("><< portrait");
+				GameActivity.getInstance( ).setRequestedOrientation( ActivityInfo.SCREEN_ORIENTATION_PORTRAIT );
 			}
 
 		}

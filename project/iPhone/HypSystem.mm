@@ -3,11 +3,16 @@
  * @author shoe[box]
  */
 #include <HypSystem.h>
+#import <Foundation/NSTimeZone.h>
 #import <UIKit/UIKit.h>
 #include <netinet/in.h>
 #import <SystemConfiguration/SCNetworkReachability.h>
 #import <SystemConfiguration/SystemConfiguration.h>
 namespace hypsystem{
+
+	int getGMT_offset( ){
+		return 1000 * [[NSTimeZone localTimeZone] secondsFromGMT];
+	}
 
 	bool isConnectedtoInternet( ){
 		// Create zero addy
@@ -99,10 +104,19 @@ namespace hypsystem{
 	}
 
     void setOrientation( int o ){
-    		printf("setOrientation\n" );
-		[[UIApplication sharedApplication] setStatusBarOrientation:UIDeviceOrientationPortrait animated:NO];
-		[[UIDevice currentDevice] setOrientation:UIDeviceOrientationPortrait];
+    	printf("setOrientation\n" );
+    	if( o == 0 ){
+    		//Landscape
+    		[[UIApplication sharedApplication] setStatusBarOrientation:UIDeviceOrientationLandscapeLeft animated:NO];
+			[[UIDevice currentDevice] setOrientation:UIDeviceOrientationLandscapeLeft];
+			//[[UIDevice currentDevice] performSelector:NSSelectorFromString(@"setOrientation:") withObject:(id)UIDeviceOrientationLandscapeLeft];
+    	}else if( o == 1 ){
+    		//Portrait
+    		[[UIApplication sharedApplication] setStatusBarOrientation:UIDeviceOrientationPortrait animated:NO];
+			[[UIDevice currentDevice] setOrientation:UIDeviceOrientationPortrait];
+			//[[UIDevice currentDevice] performSelector:NSSelectorFromString(@"setOrientation:") withObject:(id)UIDeviceOrientationPortrait];
     	}
-        //
+
+    }
 
 }

@@ -3,7 +3,7 @@
 #define Device
 
 namespace hypsystem{
-
+	int getGMT_offset( );
 	bool isConnectedtoInternet( );
 	bool isiPhone( );
 	int get_screen_height( );
