@@ -90,7 +90,7 @@ class HypSystem{
 		@JNI
 		#end
 		static public function isSmartPhone( ) : Bool {
-			return false;
+			return true;
 		}
 
 		#if ios
@@ -268,6 +268,21 @@ class HypSystem{
 		static public function setFixed_orientation( i : Int ) : Void {
 
 		}
+
+		#if android
+
+		/**
+		*
+		*
+		* @public
+		* @return	void
+		*/
+		@JNI
+		static public function toast( s : String ) : Void {
+
+		}
+
+		#end
 
 		/**
 		*

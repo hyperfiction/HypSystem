@@ -44,6 +44,7 @@ import java.util.Locale;
 import java.util.TimeZone;
 import java.util.UUID;
 
+import android.widget.Toast;
 import org.apache.http.conn.util.InetAddressUtils;
 
 import org.haxe.nme.GameActivity;
@@ -94,6 +95,27 @@ class HypSystem{
 				offset += 1;
 
 			return offset;
+		}
+
+		/**
+		*
+		*
+		* @public
+		* @return	void
+		*/
+		static public void toast( final String s ){
+
+			GameActivity.getInstance( ).runOnUiThread(
+				new Runnable(){
+	                @Override
+	                public void run() {
+	                	Toast 	toast = Toast.makeText( GameActivity.getContext( ) , s , Toast.LENGTH_SHORT);
+								toast.show( );
+	                }
+		        }
+            );
+
+
 		}
 
 		/**
@@ -276,12 +298,12 @@ class HypSystem{
 	                @Override
 	                public void run() {
 	                	try{
-						if( dialog_progress != null )
-	                    		dialog_progress.hide( );
-					} catch( Exception e) {
-						trace( "Exception in hide_loading");
-						e.printStackTrace();
-					}
+							if( dialog_progress != null )
+		                   		dialog_progress.hide( );
+						} catch( Exception e) {
+							trace( "Exception in hide_loading");
+							e.printStackTrace();
+						}
 	                }
 		        }
             );
