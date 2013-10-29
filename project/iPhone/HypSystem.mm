@@ -11,7 +11,7 @@
 namespace hypsystem{
 
 	int getGMT_offset( ){
-		return 1000 * [[NSTimeZone localTimeZone] secondsFromGMT];
+		return [[NSTimeZone localTimeZone] secondsFromGMT] / 3600;
 	}
 
 	bool isConnectedtoInternet( ){
