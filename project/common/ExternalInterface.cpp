@@ -56,6 +56,10 @@ extern "C" JNIEXPORT void JNICALL Java_hypsystem_net_NetworkInfos_onUpdate(
 
 #endif
 
+//iOS --------------------------------------------------------------------------
+
+
+
 //Main -------------------------------------------------------------------------
 
 extern "C" void hypsystem_main() 

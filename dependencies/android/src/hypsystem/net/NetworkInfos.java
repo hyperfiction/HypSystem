@@ -23,8 +23,6 @@ public class NetworkInfos
 
 	static public void listenForChanges()
 	{
-		trace("listen");
-
 		IntentFilter filter = new IntentFilter(
 			ConnectivityManager.CONNECTIVITY_ACTION);
 
