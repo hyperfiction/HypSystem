@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	
+	<classpath name="src" />
+
+	<ndll name="hypsystem" if="android"/>
+	<!--
+	-->
+	<!-- Use the following for an Android Java extension, not needed otherwise -->
+	
+	<dependency name="hypsystem" path="dependencies/android" if="android" />
+
+	<android extension="hypsystem.HypSystem" />
+	
+</project>
