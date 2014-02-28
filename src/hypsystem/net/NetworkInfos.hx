@@ -10,10 +10,7 @@ class NetworkInfos
 		listenForChanges();
 	}
 
-	#if android
-	@JNI
-	#end
-	public static function isConnected():Bool
+	@JNI public static function isConnected():Bool
 	{
 		return false;
 	}
@@ -45,32 +42,24 @@ class NetworkInfos
 		return res;
 	}
 
-	static function onStatusChanged()
+	static function onStatusChanged():Void
 	{
 		trace("onStatusChanged ::: ");
 	}
 
-	#if android
-	@JNI
-	#end
-	public static function isWifi():Bool
+	@JNI public static function isWifi():Bool
 	{
 		return false;
 	}
 
-	#if android
-	@JNI
-	#end
-	static function getActiveConnectionType():Int{}
+	@JNI static function getActiveConnectionType():Int{
+		return 0;
+	}
 	
-	#if android
-	@JNI
-	#end
-	static function listenForChanges():Void{}
+	@JNI static function listenForChanges():Void{}
+	
 
-	#if(android || ios)
 	@CPP("hypsystem","hypsystem_setEventListener")
-	#end
 	static function setListener(f:Void->Void):Void{}
 
 }
