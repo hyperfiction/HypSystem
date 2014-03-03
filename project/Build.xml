@@ -32,6 +32,7 @@
 		<compilerflag value="-IiPhone/include"/>
 		<compilerflag value="-Iinclude"/>
 		<file name="iPhone/Reachability.m"/>		
+		<file name="iPhone/Device.mm"/>		
 		<file name="iPhone/NetworkInfos.mm"/>		
   </files>
 	

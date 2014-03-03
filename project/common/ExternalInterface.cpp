@@ -13,6 +13,7 @@
 
 #ifdef IPHONE
 #include <stddef.h>
+#include "Device.h"
 #include "NetworkInfos.h"
 #endif
 
@@ -58,6 +59,8 @@ extern "C" JNIEXPORT void JNICALL Java_hypsystem_net_NetworkInfos_onUpdate(
 
 #ifdef IPHONE
 
+//NetworkInfos.hx
+
 extern "C" void hypsystem_networkinterface_onUpdate()
 {
 	int top = 0;
@@ -94,6 +97,22 @@ static value hypsystem_networkinterface_listen()
 	return alloc_null();
 }
 DEFINE_PRIM(hypsystem_networkinterface_listen, 0);
+
+//Device.hx
+
+static value hypsystem_device_getUuid()
+{
+	const char *res = device::getUuid();
+	return alloc_string(res);
+}
+DEFINE_PRIM(hypsystem_device_getUuid, 0);
+
+static value hypsystem_device_getLangCode()
+{
+	const char *res = device::getLangCode();
+	return alloc_string(res);
+}
+DEFINE_PRIM(hypsystem_device_getLangCode, 0);
 
 #endif
 
