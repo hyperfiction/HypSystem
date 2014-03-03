@@ -1,5 +1,5 @@
 {
-	"name": "HypSystem",
+	"name": "hyp-system",
 	"url": "",
 	"license": "MIT",
 	"tags": [],
@@ -8,6 +8,6 @@
 	"releasenote": "",
 	"contributors": [""],
 	"dependencies": {
-		"inthebox-macros":"1.0.1"
+		"inthebox-macros":""
 	}
 }

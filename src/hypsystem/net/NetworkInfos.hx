@@ -10,7 +10,10 @@ class NetworkInfos
 		listenForChanges();
 	}
 
-	@JNI public static function isConnected():Bool
+	
+	@JNI 
+	@IOS("hyp-system","hypsystem_networkinterface_isConnected")
+	public static function isConnected():Bool
 	{
 		return false;
 	}
@@ -20,7 +23,7 @@ class NetworkInfos
 
 		var type = 0;
 
-		#if android
+		#if(android || ios)
 			type = getActiveConnectionType();
 		#end
 
@@ -36,7 +39,6 @@ class NetworkInfos
 				ConnectionType.MOBILE;
 
 			case _:
-
 		}
 
 		return res;
@@ -47,16 +49,23 @@ class NetworkInfos
 		trace("onStatusChanged ::: ");
 	}
 
-	@JNI public static function isWifi():Bool
+	
+	@JNI 
+	@IOS("hyp-system","hypsystem_networkinterface_isWifi")
+	public static function isWifi():Bool
 	{
 		return false;
 	}
 
-	@JNI static function getActiveConnectionType():Int{
+	@JNI
+	@IOS("hyp-system","hypsystem_networkinterface_connectionType")
+	static function getActiveConnectionType():Int{
 		return 0;
-	}
+	}	
 	
-	@JNI static function listenForChanges():Void{}
+	@JNI 
+	@IOS("hyp-system","hypsystem_networkinterface_listen")
+	static function listenForChanges():Void{}
 	
 
 	@CPP("hypsystem","hypsystem_setEventListener")

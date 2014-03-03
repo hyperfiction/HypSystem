@@ -4,6 +4,7 @@
 	<classpath name="src" />
 
 	<ndll name="hypsystem" if="android"/>
+	<ndll name="hypsystem" if="ios"/>
 	<!--
 	-->
 	<!-- Use the following for an Android Java extension, not needed otherwise -->
@@ -12,4 +13,5 @@
 
 	<android extension="hypsystem.HypSystem" />
 	
+	<dependency name="SystemConfiguration.framework" if="ios" />
 </project>

@@ -13,9 +13,7 @@
 
 #ifdef IPHONE
 #include <stddef.h>
-#include "VideoPlayer.h"
-
-using namespace hypsystem;
+#include "NetworkInfos.h"
 #endif
 
 #ifdef ANDROID
@@ -58,7 +56,46 @@ extern "C" JNIEXPORT void JNICALL Java_hypsystem_net_NetworkInfos_onUpdate(
 
 //iOS --------------------------------------------------------------------------
 
+#ifdef IPHONE
 
+extern "C" void hypsystem_networkinterface_onUpdate()
+{
+	int top = 0;
+	gc_set_top_of_stack(&top,true);
+	gc_exit_blocking();
+
+	val_call0(fOnEventListener->get());
+
+	gc_enter_blocking();	
+}
+
+static value hypsystem_networkinterface_isConnected()
+{
+	return alloc_bool(networkinfos::isConnected());	
+}
+DEFINE_PRIM(hypsystem_networkinterface_isConnected, 0);
+
+static value hypsystem_networkinterface_connectionType()
+{
+	return alloc_int(networkinfos::getActiveConnectionType());	
+}
+DEFINE_PRIM(hypsystem_networkinterface_connectionType, 0);
+
+static value hypsystem_networkinterface_isWifi()
+{
+	bool isWifi = networkinfos::isWifi();
+	return alloc_bool(isWifi);	
+}
+DEFINE_PRIM(hypsystem_networkinterface_isWifi, 0);
+
+static value hypsystem_networkinterface_listen()
+{
+	networkinfos::listen();
+	return alloc_null();
+}
+DEFINE_PRIM(hypsystem_networkinterface_listen, 0);
+
+#endif
 
 //Main -------------------------------------------------------------------------
 

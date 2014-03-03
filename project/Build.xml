@@ -1,21 +1,13 @@
 <xml>
-	
+
+	<set name="GCC_THIN_ARCHIVE" value="1" if="iphone"/>
 	<include name="${HXCPP}/build-tool/BuildCommon.xml"/>
 	
 	<set name="mobile" value="1" if="iphone"/>
 	<set name="mobile" value="1" if="android"/>
 	<set name="mobile" value="1" if="blackberry"/>
 	<set name="mobile" value="1" if="webos"/>
-	
-	<files id="common">
-		
-		<compilerflag value="-Iinclude"/>
-		
-		<file name="common/ExternalInterface.cpp"/>
-		<file name="common/HypSystem.cpp"/>
-		
-	</files>
-	
+
 	<set name="name_prefix" value="lib" if="iphone"/>
 	<set name="ARM_ARCH" value="-v7" if="HXCPP_ARMV7"/>
 	<set name="name_extra" value=".iphoneos${ARM_ARCH}" if="iphoneos"/>
@@ -29,18 +21,34 @@
 	<set name="SLIBEXT" value=".a" unless="windows"/>
 	<set name="SLIBEXT" value=".so" if="webos"/>
 	
+	<files id="common">		
+		<compilerflag value="-Iinclude"/>
+		<file name="common/ExternalInterface.cpp"/>		
+	</files>
+
+	<files id="iphone">
+		<depend name="${HXCPP}/include/hx/Macros.h"/>
+		<depend name="${HXCPP}/include/hx/CFFI.h"/>
+		<compilerflag value="-IiPhone/include"/>
+		<compilerflag value="-Iinclude"/>
+		<file name="iPhone/Reachability.m"/>		
+		<file name="iPhone/NetworkInfos.mm"/>		
+  </files>
+	
+	<files id="android"/>
+	
 	<target id="NDLL" output="${name_prefix}hypsystem${debug_extra}${name_extra}" tool="linker" toolid="${ndll-tool}">
 		
 		<outdir name="../ndll/${BINDIR}"/>
 		<ext value=".ndll" unless="mobile"/>
 		<files id="common"/>
+		<files id="android" if="android"/>
+		<files id="iphone" if="iphone"/>
 		
 	</target>
 	
-	<target id="default">
-		
-		<target id="NDLL"/>
-		
+	<target id="default">		
+		<target id="NDLL"/>		
 	</target>
 	
 </xml>
