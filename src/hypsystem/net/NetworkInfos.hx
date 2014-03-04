@@ -1,15 +1,24 @@
 package hypsystem.net;
 
+#if msignal
+import msignal.Signal;
+#end
+
 @:build(ShortCuts.mirrors())
 class NetworkInfos
 {
+
+	#if msignal
+	public static var onConnectivityChanged:Signal0 = new Signal0();
+	#else
+	public static var onConnectivityChanged:Void->Void;
+	#end
 
 	public static function listen():Void
 	{
 		setListener(onStatusChanged);
 		listenForChanges();
 	}
-
 	
 	@JNI 
 	@IOS("hyp-system","hypsystem_networkinterface_isConnected")
@@ -46,7 +55,12 @@ class NetworkInfos
 
 	static function onStatusChanged():Void
 	{
-		trace("onStatusChanged ::: ");
+		#if msignal
+		onConnectivityChanged.dispatch();
+		#else
+		if(onConnectivityChanged!=null)
+			onConnectivityChanged();
+		#end
 	}
 
 	
