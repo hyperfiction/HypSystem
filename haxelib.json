@@ -8,6 +8,6 @@
 	"releasenote": "",
 	"contributors": [""],
 	"dependencies": {
-		"inthebox-macros":""
+		"inthebox-macros":"1.0.2"
 	}
 }
