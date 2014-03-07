@@ -8,6 +8,6 @@
 	"releasenote": "Callbacks calls from java are now thread-safe",
 	"contributors": ["shoebox"] ,
 	"dependencies": {
-		"inthebox-macros":"1.0.x"
+		"inthebox-macros":""
 	}
 }
