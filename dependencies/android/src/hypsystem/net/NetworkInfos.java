@@ -10,6 +10,8 @@ import android.net.NetworkInfo;
 
 import hypsystem.HypSystem;
 
+import java.lang.Runnable;
+
 public class NetworkInfos
 {
 
@@ -42,7 +44,6 @@ public class NetworkInfos
 
 	static public int getActiveConnectionType()
 	{
-
 		int res = 0;
 		if(isConnected())
 		{
@@ -101,7 +102,17 @@ class ConnectivityChangeReceiver extends BroadcastReceiver
 
 	public void onReceive(Context context, Intent intent)
 	{
-		NetworkInfos.onUpdate();
+		HypSystem.callbackHandler.post(
+			new Runnable()
+			{
+				@Override
+				public void run()
+				{
+					NetworkInfos.onUpdate();
+				}
+			}
+		);
+		
 	}
 
 }

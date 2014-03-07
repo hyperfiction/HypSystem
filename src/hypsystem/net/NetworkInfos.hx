@@ -55,6 +55,7 @@ class NetworkInfos
 
 	static function onStatusChanged():Void
 	{
+		trace("onStatusChanged");
 		#if msignal
 		onConnectivityChanged.dispatch();
 		#else
@@ -73,7 +74,8 @@ class NetworkInfos
 
 	@JNI
 	@IOS("hyp-system","hypsystem_networkinterface_connectionType")
-	static function getActiveConnectionType():Int{
+	static function getActiveConnectionType():Int
+	{
 		return 0;
 	}	
 	

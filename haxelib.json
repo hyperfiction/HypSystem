@@ -1,13 +1,13 @@
 {
 	"name": "hyp-system",
-	"url": "",
+	"url": "https://github.com/hyperfiction/HypSystem",
 	"license": "MIT",
-	"tags": [],
-	"description": "",
-	"version": "0.0.1",
-	"releasenote": "",
-	"contributors": [""],
+	"tags": ["hyperfiction","android","ios","connectivity","uuid"],
+	"description": "Native extension for OpenFL",
+	"version": "0.0.2",
+	"releasenote": "Callbacks calls from java are now thread-safe",
+	"contributors": ["shoebox"] ,
 	"dependencies": {
-		"inthebox-macros":"1.0.2"
+		"inthebox-macros":"1.0.x"
 	}
 }
