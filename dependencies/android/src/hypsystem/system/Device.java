@@ -50,7 +50,9 @@ public class Device
 
 	public static float getDensity()
 	{
-		return HypSystem.mainContext.getResources().getDisplayMetrics().density;
+		Resources resources = HypSystem.mainContext.getResources();
+		DisplayMetrics metrics = resources.getDisplayMetrics();
+		return metrics.density;
 	}
 
 	public static String getLanguageCode()
