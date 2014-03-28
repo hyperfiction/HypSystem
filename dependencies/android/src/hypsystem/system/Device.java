@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences.Editor;
 import android.content.SharedPreferences;
+import android.content.res.Resources;
 import android.util.DisplayMetrics;
 import android.view.Display;
 import android.view.WindowManager;
@@ -37,6 +38,19 @@ public class Device
 		}
 
 		return uniqueID;
+	}
+
+	public static int dpToPx(int dp)
+	{
+		Resources resources = HypSystem.mainContext.getResources();
+		DisplayMetrics metrics = resources.getDisplayMetrics();
+		float px = dp * (metrics.densityDpi / 160f);
+		return (int)px;
+	}
+
+	public static float getDensity()
+	{
+		return HypSystem.mainContext.getResources().getDisplayMetrics().density;
 	}
 
 	public static String getLanguageCode()
@@ -85,6 +99,16 @@ public class Device
 		d.getMetrics(dm);
 
 		return dm;
+	}
+
+	static public int getScreenHeight()
+	{
+		return getMetrics().heightPixels;
+	}
+
+	static public int getScreenWidth()
+	{
+		return getMetrics().widthPixels;
 	}
 
 }
