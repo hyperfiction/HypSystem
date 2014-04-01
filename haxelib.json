@@ -2,10 +2,10 @@
 	"name": "hyp-system",
 	"url": "https://github.com/hyperfiction/HypSystem",
 	"license": "MIT",
-	"tags": ["hyperfiction","android","ios","connectivity","uuid"],
+	"tags": ["hyperfiction","android","ios","connectivity","uuid","density"],
 	"description": "Native extension for OpenFL",
-	"version": "0.0.2",
-	"releasenote": "Callbacks calls from java are now thread-safe",
+	"version": "0.0.3",
+	"releasenote": "Screen device methods",
 	"contributors": ["shoebox"] ,
 	"dependencies": {
 		"inthebox-macros":""
