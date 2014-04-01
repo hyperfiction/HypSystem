@@ -4,14 +4,16 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences.Editor;
 import android.content.SharedPreferences;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.util.DisplayMetrics;
-import android.view.Display;
 import android.view.WindowManager;
 
 import java.util.Locale;
 import java.util.UUID;
 
 import hypsystem.HypSystem;
+import hypsystem.system.platform.Android;
 
 public class Device
 {
@@ -44,47 +46,45 @@ public class Device
 		return Locale.getDefault().getLanguage();
 	}
 
-	public static String getScreenBucket()
+
+	static public int getScreenHeight()
 	{
-		DisplayMetrics dm = getMetrics();
+		return Android.getMetrics().heightPixels;
+	}
 
-		String res = "mdpi";
+	static public int getScreenWidth()
+	{
+		return Android.getMetrics().widthPixels;
+	}
 
-		switch(dm.densityDpi)
+	static public boolean isTablet()
+	{
+		boolean result = false;
+
+		Resources resources = HypSystem.mainContext.getResources();
+		boolean xLarge = ((resources.getConfiguration().screenLayout & 
+			Configuration.SCREENLAYOUT_SIZE_MASK) == 
+			Configuration.SCREENLAYOUT_SIZE_XLARGE);
+
+		if (xLarge)
 		{
-			case DisplayMetrics.DENSITY_LOW:
-				res = "ldpi";
-				break;
+			DisplayMetrics metrics = Android.getMetrics();
 
-			case DisplayMetrics.DENSITY_MEDIUM:
-				res = "mdpi";
-				break;
-
-			case DisplayMetrics.DENSITY_HIGH:
-				res = "hdpi";
-				break;
-
-			case DisplayMetrics.DENSITY_XHIGH:
-				res = "xhdpi";
-				break;
-
-			case DisplayMetrics.DENSITY_XXHIGH:
-				res = "xxhdpi";
-				break;
+			if (metrics.densityDpi == DisplayMetrics.DENSITY_DEFAULT
+				|| metrics.densityDpi == DisplayMetrics.DENSITY_HIGH
+				|| metrics.densityDpi == DisplayMetrics.DENSITY_MEDIUM
+				|| metrics.densityDpi == DisplayMetrics.DENSITY_TV
+				|| metrics.densityDpi == DisplayMetrics.DENSITY_XHIGH)
+			{
+				result = true;
+			}
 		}
-		return res;
+
+		return result;
 	}
 
-	static DisplayMetrics getMetrics()
+	static Resources getRessource()
 	{
-		Activity mainActivity = HypSystem.mainActivity;
-		WindowManager wm = mainActivity.getWindowManager();
-		Display d = wm.getDefaultDisplay();
-
-		DisplayMetrics dm = new DisplayMetrics();
-		d.getMetrics(dm);
-
-		return dm;
+		return HypSystem.mainContext.getResources();
 	}
-
 }
