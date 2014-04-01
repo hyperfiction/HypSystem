@@ -8,6 +8,7 @@ import android.content.res.Resources;
 import android.util.DisplayMetrics;
 import android.view.Display;
 import android.view.WindowManager;
+import android.util.TypedValue;
 
 import java.util.Locale;
 import java.util.UUID;
@@ -44,7 +45,8 @@ public class Device
 	{
 		Resources resources = HypSystem.mainContext.getResources();
 		DisplayMetrics metrics = resources.getDisplayMetrics();
-		float px = dp * (metrics.densityDpi / 160f);
+		float px = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, dp, 
+			metrics);
 		return (int)px;
 	}
 

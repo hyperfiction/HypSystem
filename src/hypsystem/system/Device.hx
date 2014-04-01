@@ -29,7 +29,7 @@ class Device
 	@JNI
 	public static function dpToPx(dp:Int):Int
 	{
-		return (int) (dp * Resources.getSystem().getDisplayMetrics().density);
+		return dp;
 	}
 
 	@JNI
@@ -47,7 +47,7 @@ class Device
 	@JNI
 	public static function getScreenWidth():Int
 	{
-		return flash.Lib.current.stage.stageHeight;
+		return flash.Lib.current.stage.stageWidth;
 	}
 
 	#end
