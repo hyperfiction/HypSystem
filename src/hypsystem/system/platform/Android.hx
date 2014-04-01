@@ -14,11 +14,4 @@ class Android
 	{
 		return dp;
 	}
-
-	@JNI
-	public static function getDensity():Float
-	{
-		return 1.0;
-	}
-	
 }

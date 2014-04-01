@@ -1,5 +1,9 @@
 namespace device
 {
-	const char* getUuid();
+	bool isTablet();
 	const char* getLangCode();
+	const char* getUuid();
+	float getScaleFactor();
+	int getScreenHeight();
+	int getScreenWidth();
 }

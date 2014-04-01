@@ -7,6 +7,11 @@
 
 namespace device
 {
+	bool isTablet()
+	{
+		return [UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad;
+	}
+
 	const char* getUuid()
 	{
 		NSString *bundleName = [[[NSBundle mainBundle] infoDictionary] 
@@ -38,4 +43,21 @@ namespace device
 		return [[[NSLocale preferredLanguages] objectAtIndex:0] UTF8String];
 	}
 
+	float getScaleFactor()
+	{
+		float scale = [UIScreen mainScreen].scale;
+		return scale;
+	}
+
+	int getScreenHeight()
+	{
+		CGRect bounds = [[UIScreen mainScreen] bounds];
+		return bounds.size.height;
+	}
+
+	int getScreenWidth()
+	{
+		CGRect bounds = [[UIScreen mainScreen] bounds];
+		return bounds.size.width;
+	}
 }

@@ -114,6 +114,34 @@ static value hypsystem_device_getLangCode()
 }
 DEFINE_PRIM(hypsystem_device_getLangCode, 0);
 
+static value hypsystem_device_getScreenWidth()
+{
+	int res = device::getScreenWidth();
+	return alloc_int(res);
+}
+DEFINE_PRIM(hypsystem_device_getScreenWidth, 0);
+
+static value hypsystem_device_getScreenHeight()
+{
+	int res = device::getScreenHeight();
+	return alloc_int(res);
+}
+DEFINE_PRIM(hypsystem_device_getScreenHeight, 0);
+
+static value hypsystem_device_isTablet()
+{
+	bool isTablet = device::isTablet();
+	return alloc_bool(isTablet);
+}
+DEFINE_PRIM(hypsystem_device_isTablet, 0);
+
+static value hypsystem_device_getScaleFactor()
+{
+	float scaleFactor = device::getScaleFactor();
+	return alloc_float(scaleFactor);
+}
+DEFINE_PRIM(hypsystem_device_getScaleFactor, 0);
+
 #endif
 
 //Main -------------------------------------------------------------------------
