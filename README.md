@@ -36,7 +36,17 @@ Basic reference
 
 >[getLanguageCode](): Get the language code used by the device.
 
->[getScreenBucket](): Android only method which return the screen bucket of the device. (ldpi/mdpi/hdpi/xhdpi/xxhdpi)
+>[getScreenHeight](): Return the device screen height
+
+>[getScreenWidth](): Return the device screen width
+
+#### The Android platform class (hypsystem.system.platform.Android)
+
+>[getScreenBucket](): Return the screen bucket of the device. (ldpi/mdpi/hdpi/xhdpi/xxhdpi)
+
+>[dpToPx](): Convert a DP value to pixels
+
+>[getDensity](): Return the device screen density
 
 Made at Hyperfiction
 --------------------
