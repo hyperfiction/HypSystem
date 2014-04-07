@@ -4,8 +4,8 @@
 	"license": "MIT",
 	"tags": ["hyperfiction","android","ios","connectivity","uuid","density"],
 	"description": "Native extension for OpenFL",
-	"version": "0.0.4",
-	"releasenote": "iOS Screen device methods",
+	"version": "0.0.5",
+	"releasenote": "OpenFL 1.3 compatible",
 	"contributors": ["shoebox"] ,
 	"dependencies": {
 		"inthebox-macros":""
