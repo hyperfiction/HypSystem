@@ -4,8 +4,9 @@
 	"license": "MIT",
 	"tags": ["hyperfiction","android","ios","connectivity","uuid","density"],
 	"description": "Native extension for OpenFL",
-	"version": "0.0.5",
-	"releasenote": "OpenFL 1.3 compatible",
+	"version": "0.0.6",
+	"classPath":"src",
+	"releasenote": "Now usable has a haxelib",
 	"contributors": ["shoebox"] ,
 	"dependencies": {
 		"inthebox-macros":""

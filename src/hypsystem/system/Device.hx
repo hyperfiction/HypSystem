@@ -1,14 +1,39 @@
 package hypsystem.system;
 
+#if flash
+import haxe.crypto.Md5;
+import flash.net.SharedObject;
+#end
+
 @:build(ShortCuts.mirrors())
 class Device
 {
 
+	/*
+	Return a install wise UUID
+	
+	@return the uuid
+	*/
 	@JNI
 	@IOS("hyp-system","hypsystem_device_getUuid")
 	public static function getUuid():String
 	{
-		return "FLASH-UUID";
+		var result:String = null;
+		var so = SharedObject.getLocal("hypsystem-device");
+		if(so.data.uuid != null)
+		{
+			result = so.data.uuid;
+		}
+		else
+		{
+			var date = Date.now().getTime();
+			var random = Std.int(Math.random() * 424242);
+			result = "::FLASH::"+Md5.encode('::UNIQUE::.$date.$random');
+			so.data.uuid = result;
+			so.flush();
+		}
+
+		return result;
 	}
 
 	@JNI
