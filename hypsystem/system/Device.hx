@@ -75,4 +75,11 @@ class Device
 		return 1.0;
 	}
 
+	@JNI
+	@IOS("hyp-system","hypsystem_device_getSystemVersion")
+	public static function getSystemVersion():String
+	{
+		return "x.0";
+	}
+
 }
