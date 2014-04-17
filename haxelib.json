@@ -4,8 +4,8 @@
 	"license": "MIT",
 	"tags": ["hyperfiction","android","ios","connectivity","uuid","density"],
 	"description": "Native extension for OpenFL",
-	"version": "0.0.7",
-	"releasenote": "Fix 'classPath' node vs OpenFL",
+	"version": "0.0.8",
+	"releasenote": "Get device OS version / The UUID is now format compliant for the flash target",
 	"contributors": ["shoebox"] ,
 	"dependencies": {
 		"inthebox-macros":""
