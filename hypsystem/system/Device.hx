@@ -28,7 +28,16 @@ class Device
 		{
 			var date = Date.now().getTime();
 			var random = Std.int(Math.random() * 424242);
-			result = "::FLASH::"+Md5.encode('::UNIQUE::.$date.$random');
+			var s = Md5.encode('::FLASH::.$date.$random'); 		
+			
+			var a = ["F1A5" + s.substr(4, 4)];
+			for (i in 0...3)
+				a.push(s.substr(i * 4 + 8, 4));
+				a.push(s.substr(20, 12));
+				
+			result = a.join("-");
+			result = result.toUpperCase();
+			
 			so.data.uuid = result;
 			so.flush();
 		}
