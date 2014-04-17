@@ -144,7 +144,7 @@ DEFINE_PRIM(hypsystem_device_getScaleFactor, 0);
 
 static value hypsystem_device_getSystemVersion()
 {
-	const char *res = Device::getSystemVersion();
+	const char *res = device::getSystemVersion();
 	return alloc_string(res);
 }
 DEFINE_PRIM(hypsystem_device_getSystemVersion, 0);

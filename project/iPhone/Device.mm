@@ -45,7 +45,7 @@ namespace device
 
 	const char* getSystemVersion()
 	{
-		return [[[UIDevice currentDevice].systemVersion floatValue] UTF8String];
+		return [[[UIDevice currentDevice] systemVersion] UTF8String];
 	}
 
 	float getScaleFactor()
