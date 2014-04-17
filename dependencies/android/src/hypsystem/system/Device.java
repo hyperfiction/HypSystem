@@ -6,6 +6,7 @@ import android.content.SharedPreferences.Editor;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.os.Build;
 import android.util.DisplayMetrics;
 import android.view.WindowManager;
 
@@ -46,6 +47,10 @@ public class Device
 		return Locale.getDefault().getLanguage();
 	}
 
+	public static String getSystemVersion()
+	{
+		return Build.VERSION.RELEASE;
+	}
 
 	static public int getScreenHeight()
 	{

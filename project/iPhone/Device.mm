@@ -43,6 +43,11 @@ namespace device
 		return [[[NSLocale preferredLanguages] objectAtIndex:0] UTF8String];
 	}
 
+	const char* getSystemVersion()
+	{
+		return [[[UIDevice currentDevice].systemVersion floatValue] UTF8String];
+	}
+
 	float getScaleFactor()
 	{
 		float scale = [UIScreen mainScreen].scale;
