@@ -92,4 +92,9 @@ public class Device
 	{
 		return HypSystem.mainContext.getResources();
 	}
+
+	static float getScaleFactor()
+	{
+		return Android.dpToPx(1);
+	}
 }
