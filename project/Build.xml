@@ -34,6 +34,7 @@
 		<file name="iPhone/Reachability.m"/>		
 		<file name="iPhone/Device.mm"/>		
 		<file name="iPhone/NetworkInfos.mm"/>		
+		<file name="iPhone/DateTools.mm"/>		
   </files>
 	
 	<files id="android"/>

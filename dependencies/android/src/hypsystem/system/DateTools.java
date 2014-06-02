@@ -49,7 +49,7 @@ class DateTools
 
 	public static float getUTCMinutes(float timestamp)
 	{
-		return getUTC(getDate(timestamp)).get(Calendar.MINUTE );
+		return getUTC(getDate(timestamp)).get(Calendar.MINUTE);
 	}
 
 	public static float getUTCSeconds(float timestamp)
