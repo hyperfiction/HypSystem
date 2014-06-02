@@ -15,6 +15,7 @@
 #include <stddef.h>
 #include "Device.h"
 #include "NetworkInfos.h"
+#include "DateTools.h"
 #endif
 
 #ifdef ANDROID
@@ -148,6 +149,92 @@ static value hypsystem_device_getSystemVersion()
 	return alloc_string(res);
 }
 DEFINE_PRIM(hypsystem_device_getSystemVersion, 0);
+
+//DateTools.hx
+
+static value hypsystem_datetools_getTimezoneOffset()
+{
+	float res = datetools::getTimezoneOffset();
+	return alloc_float(res);
+}
+DEFINE_PRIM(hypsystem_datetools_getTimezoneOffset, 0);
+
+static value hypsystem_datetools_getUTCFullYear(value timestamp)
+{
+	float res = datetools::getUTCFullYear(val_float(timestamp));
+	return alloc_float(res);
+}
+DEFINE_PRIM(hypsystem_datetools_getUTCFullYear, 1);
+
+static value hypsystem_datetools_getUTCMonth(value timestamp)
+{
+	float res = datetools::getUTCMonth(val_float(timestamp));
+	return alloc_float(res);
+}
+DEFINE_PRIM(hypsystem_datetools_getUTCMonth, 1);
+
+static value hypsystem_datetools_getUTCDay(value timestamp)
+{
+	float res = datetools::getUTCDay(val_float(timestamp));
+	return alloc_float(res);
+}
+DEFINE_PRIM(hypsystem_datetools_getUTCDay, 1);
+
+static value hypsystem_datetools_getUTCDate(value timestamp)
+{
+	float res = datetools::getUTCDate(val_float(timestamp));
+	return alloc_float(res);
+}
+DEFINE_PRIM(hypsystem_datetools_getUTCDate, 1);
+
+static value hypsystem_datetools_getUTCHours(value timestamp)
+{
+	float res = datetools::getUTCHours(val_float(timestamp));
+	return alloc_float(res);
+}
+DEFINE_PRIM(hypsystem_datetools_getUTCHours, 1);
+
+static value hypsystem_datetools_getUTCMinutes(value timestamp)
+{
+	float res = datetools::getUTCMinutes(val_float(timestamp));
+	return alloc_float(res);
+}
+DEFINE_PRIM(hypsystem_datetools_getUTCMinutes, 1);
+
+static value hypsystem_datetools_getUTCSeconds(value timestamp)
+{
+	float res = datetools::getUTCSeconds(val_float(timestamp));
+	return alloc_float(res);
+}
+DEFINE_PRIM(hypsystem_datetools_getUTCSeconds, 1);
+
+static value hypsystem_datetools_getUTCMilliseconds(value timestamp)
+{
+	float res = datetools::getUTCMilliseconds(val_float(timestamp));
+	return alloc_float(res);
+}
+DEFINE_PRIM(hypsystem_datetools_getUTCMilliseconds, 1);
+
+static value hypsystem_datetools_toUTCString(value timestamp)
+{
+	const char* res = datetools::toUTCString(val_float(timestamp));
+	return alloc_string(res);
+}
+DEFINE_PRIM(hypsystem_datetools_toUTCString, 1);
+
+static value hypsystem_datetools_toISOString(value timestamp)
+{
+	const char* res = datetools::toISOString(val_float(timestamp));
+	return alloc_string(res);
+}
+DEFINE_PRIM(hypsystem_datetools_toISOString, 1);
+
+static value hypsystem_datetools_fromISO(value datestring)
+{
+	float result = datetools::fromISO(val_string(datestring));
+	return alloc_float(result);
+}
+DEFINE_PRIM(hypsystem_datetools_fromISO, 1);
 
 #endif
 
