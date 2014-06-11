@@ -12,6 +12,13 @@ namespace device
 		return [UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad;
 	}
 
+	const char* getName()
+	{
+		NSString *deviceName = [[UIDevice currentDevice] name];
+		const char *result = [deviceName UTF8String];
+		return result;
+	}
+
 	const char* getUuid()
 	{
 		NSString *bundleName = [[[NSBundle mainBundle] infoDictionary] 

@@ -6,8 +6,15 @@ import flash.net.SharedObject;
 #end
 
 @:build(ShortCuts.mirrors())
+@CPP_DEFAULT_LIBRARY("hyp-system")
+@CPP_PRIMITIVE_PREFIX("hypsystem_device")
 class Device
 {
+
+	@JNI @IOS public static function getName():String
+	{
+		return null;
+	}
 
 	/*
 	Return a install wise UUID

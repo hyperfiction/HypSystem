@@ -101,6 +101,13 @@ DEFINE_PRIM(hypsystem_networkinterface_listen, 0);
 
 //Device.hx
 
+static value hypsystem_device_getName()
+{
+	const char *res = device::getName();
+	return alloc_string(res);
+}
+DEFINE_PRIM(hypsystem_device_getName, 0);
+
 static value hypsystem_device_getUuid()
 {
 	const char *res = device::getUuid();
