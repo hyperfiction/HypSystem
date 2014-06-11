@@ -22,7 +22,7 @@ class Device
 	@return the uuid
 	*/
 	@JNI
-	@IOS("hyp-system","hypsystem_device_getUuid")
+	@IOS
 	public static function getUuid():String
 	{
 		var result:String = null;
