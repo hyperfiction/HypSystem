@@ -12,6 +12,13 @@ namespace device
 		return [UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad;
 	}
 
+	const char* getName()
+	{
+		NSString *deviceName = [[UIDevice currentDevice] name];
+		const char *result = [deviceName UTF8String];
+		return result;
+	}
+
 	const char* getUuid()
 	{
 		NSString *bundleName = [[[NSBundle mainBundle] infoDictionary] 
@@ -21,7 +28,6 @@ namespace device
 
 		NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 		NSString *identifierString = [defaults objectForKey:bundleName];
-
 		if(identifierString == nil )
 		{
 			CFUUIDRef identifierObject = CFUUIDCreate(kCFAllocatorDefault);

@@ -4,8 +4,8 @@
 	"license": "MIT",
 	"tags": ["hyperfiction","android","ios","connectivity","uuid","density"],
 	"description": "Native extension for OpenFL",
-	"version": "0.0.9",
-	"releasenote": "Adding native DateTools for UTC / IOS conversion / parsing",
+	"version": "0.1.1",
+	"releasenote": "Get device name",
 	"contributors": ["shoebox"] ,
 	"dependencies": {
 		"inthebox-macros":""

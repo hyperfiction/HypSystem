@@ -18,6 +18,10 @@ import hypsystem.system.platform.Android;
 
 public class Device
 {
+	public static String getName()
+	{
+		return Build.MODEL;
+	}
 
 	public static String getUuid()
 	{
