@@ -30,23 +30,32 @@ Basic reference
 
 >[listen]():The extension listen for connectivity status change.
 
-##### The Device class:
+##### The [Device](hypsystem/system/Device.hx) class:
 
->[getUuid](): Return the device uuid. It's not using the device uuid, but a generated uuid for both platforms.
+>[getName](hypsystem/system/Device.hx#L14): Return the device name on iOS (example: Bob's iPad), the device model name on Android (Example : Nexus 4)
 
->[getLanguageCode](): Get the language code used by the device.
+>[getUuid](hypsystem/system/Device.hx#L26): Return the device uuid. It's not using the device uuid, but a generated uuid for both platforms.
 
->[getScreenHeight](): Return the device screen height
+>[getLanguageCode](hypsystem/system/Device.hx#L57): Return the device language code.
 
->[getScreenWidth](): Return the device screen width
+>[getScreenHeight](hypsystem/system/Device.hx#L75): Return the device screen height.
 
-#### The Android platform class (hypsystem.system.platform.Android)
+>[getScreenWidth](hypsystem/system/Device.hx#L82): Return the device screen width.
+
+>[getScaleFactor](hypsystem/system/Device.hx#L89): Return the screen scale factor.
+
+>[isTablet](hypsystem/system/Device.hx#L68): Return true if the current device is a tablet.
+
+#### The [Android](hypsystem/system/platform/Android.hx) platform class (hypsystem.system.platform.Android)
 
 >[getScreenBucket](): Return the screen bucket of the device. (ldpi/mdpi/hdpi/xhdpi/xxhdpi)
 
 >[dpToPx](): Convert a DP value to pixels
 
 >[getDensity](): Return the device screen density
+
+#### The [DateTools](hypsystem/system/DateTools.hx) class (hypsystem.system.DateTools)
+Adding ISO & UTF date support to haxe by using native methods (iOS & Android)
 
 Made at Hyperfiction
 --------------------
