@@ -16,6 +16,7 @@
 #include "Device.h"
 #include "NetworkInfos.h"
 #include "DateTools.h"
+#include "Orientation.h"
 #endif
 
 #ifdef ANDROID
@@ -242,6 +243,15 @@ static value hypsystem_datetools_fromISO(value datestring)
 	return alloc_float(result);
 }
 DEFINE_PRIM(hypsystem_datetools_fromISO, 1);
+
+//Orientation.hx
+
+static value hypsystem_orientation_set(value orientation)
+{
+	orientation::set(val_int(orientation));
+	return alloc_null();
+}
+DEFINE_PRIM(hypsystem_orientation_set , 1);
 
 #endif
 
