@@ -58,12 +58,16 @@ public class Device
 
 	static public int getScreenHeight()
 	{
-		return Android.getMetrics().heightPixels;
+		DisplayMetrics metrics = Android.getMetrics();
+		Resources res = HypSystem.mainContext.getResources();
+		return Math.min(metrics.widthPixels, metrics.heightPixels) ;
 	}
 
 	static public int getScreenWidth()
 	{
-		return Android.getMetrics().widthPixels;
+		DisplayMetrics metrics = Android.getMetrics();
+		Resources res = HypSystem.mainContext.getResources();
+		return Math.max(metrics.widthPixels, metrics.heightPixels);
 	}
 
 	static public boolean isTablet()
