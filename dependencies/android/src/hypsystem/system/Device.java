@@ -60,14 +60,25 @@ public class Device
 	{
 		DisplayMetrics metrics = Android.getMetrics();
 		Resources res = HypSystem.mainContext.getResources();
-		return Math.min(metrics.widthPixels, metrics.heightPixels) ;
+		int result;
+		if (res.getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) 
+			result = Math.min(metrics.widthPixels, metrics.heightPixels);
+		else
+			result = Math.max(metrics.widthPixels, metrics.heightPixels);
+		return result;
 	}
 
 	static public int getScreenWidth()
 	{
 		DisplayMetrics metrics = Android.getMetrics();
 		Resources res = HypSystem.mainContext.getResources();
-		return Math.max(metrics.widthPixels, metrics.heightPixels);
+		int result;
+		if (res.getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) 
+			result = Math.max(metrics.widthPixels, metrics.heightPixels);
+		else
+			result = Math.min(metrics.widthPixels, metrics.heightPixels);
+
+		return result;
 	}
 
 	static public boolean isTablet()
