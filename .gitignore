@@ -1,0 +1,24 @@
+# mtask
+bin
+.temp
+lib
+
+# munit and mcover
+/.mcover
+TestSuite.hx
+
+# OS junk
+Thumbs.db
+.DS_Store
+
+/storefront-companion.sublime-workspace
+/storefront-companion.sublime-project
+*.hxproj
+node_modules
+
+/.idea/
+
+*.iml
+
+#iOS binaries
+*.a
