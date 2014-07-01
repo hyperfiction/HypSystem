@@ -2,8 +2,11 @@
 
 #import <UIKit/UIKit.h>
 
+#import "ISO8601DateFormatter.h"
+
 namespace datetools
 {
+	static ISO8601DateFormatter *iso = [[ISO8601DateFormatter alloc] init];
 
 	NSDate* getDateFromTimestamp(float timeStamp)
 	{
@@ -82,16 +85,6 @@ namespace datetools
 		return [components second];
 	}
 
-	const char* toISOString(float timestamp)
-	{
-		NSDate *date = getDateFromTimestamp(timestamp);
-		NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-		
-		[dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ssz"];
-		NSString *datestring = [dateFormatter stringFromDate:date];
-		return [datestring UTF8String];
-	}	
-
 	const char* toUTCString(float timestamp)
 	{
 		NSDate *date = getDateFromTimestamp(timestamp);
@@ -104,13 +97,26 @@ namespace datetools
 
 	float fromISO(const char* isodate)
 	{
-		NSString *date = [NSString stringWithUTF8String:isodate];
-
-		NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
-		[dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ssz"];
-		NSDate *formatted = [dateFormatter dateFromString:date];
+		NSString *raw = [NSString stringWithUTF8String:isodate];
+		NSDate *date = [iso dateFromString:raw];
 		
-		return (float)[formatted timeIntervalSince1970] * 1000;
+		int interval = [date timeIntervalSince1970]; 
+		return (float) interval * 1000;
 	}
+
+	const char* toISOString(float timestamp, bool gmt)
+	{
+		NSDate *date = getDateFromTimestamp(timestamp);
+		
+		iso.includeTime = YES;
+		NSString *datestring;
+		if(gmt)
+			datestring = [iso stringFromDate:date 
+				timeZone:[NSTimeZone timeZoneWithName:@"GMT"]];
+		else
+			datestring = [iso stringFromDate:date];
+	
+		return [datestring UTF8String];
+	}	
 
 }

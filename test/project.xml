@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	
+	<meta title="Test" package="com.example.hypsystem.test" version="1.0.0" company="Tests" />
+	<app main="Main" path="bin" file="Test" />
+	
+	<source path="src" />
+	
+	<haxelib name="openfl" />
+	<haxelib name="inthebox-macros" />
+	
+	<assets path="assets" rename="assets" exclude="openfl.svg" />
+	<icon path="assets/openfl.svg" />
+	
+	<include path=".."/>
+
+	<android target-sdk-version="19" />
+	<android minimum-sdk-version="17" />
+
+</project>

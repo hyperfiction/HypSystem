@@ -230,12 +230,12 @@ static value hypsystem_datetools_toUTCString(value timestamp)
 }
 DEFINE_PRIM(hypsystem_datetools_toUTCString, 1);
 
-static value hypsystem_datetools_toISOString(value timestamp)
+static value hypsystem_datetools_toISOString(value timestamp, value gmt)
 {
-	const char* res = datetools::toISOString(val_float(timestamp));
+	const char* res = datetools::toISOString(val_float(timestamp), val_bool(gmt));
 	return alloc_string(res);
 }
-DEFINE_PRIM(hypsystem_datetools_toISOString, 1);
+DEFINE_PRIM(hypsystem_datetools_toISOString, 2);
 
 static value hypsystem_datetools_fromISO(value datestring)
 {

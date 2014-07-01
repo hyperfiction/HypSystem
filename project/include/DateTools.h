@@ -9,7 +9,7 @@ namespace datetools
 	float getUTCMinutes(float timestamp);
 	float getUTCMonth(float timestamp);
 	float getUTCSeconds(float timestamp);
-	const char* toISOString(float timestamp);
+	const char* toISOString(float timestamp, bool gmt);
 	const char* toUTCString(float timestamp);
 	float fromISO(const char* date);
 }

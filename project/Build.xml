@@ -36,6 +36,7 @@
 		<file name="iPhone/NetworkInfos.mm"/>		
 		<file name="iPhone/DateTools.mm"/>		
 		<file name="iPhone/Orientation.mm"/>		
+		<file name="iPhone/ISO8601DateFormatter.m"/>		
   </files>
 	
 	<files id="android"/>
