@@ -134,7 +134,6 @@ class DateTools
 		if(date == null)
 			return 0;
 
-		HypSystem.trace(iso + " === " + date);
 		return (float)date.getTime();
 	}
 
