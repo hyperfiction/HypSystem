@@ -65,12 +65,14 @@ class DateTools
 
 	public static function fromISO(s:String):Date
 	{
-		var t = DateNative.fromISO(s);
+		var t:Float = DateNative.fromISO(s);
 		t -= getTimezoneOffset();
 		
 		var date = Date.fromTime(t);
 		return date;
 	}
+
+
 }
 
 @:build(ShortCuts.mirrors())
@@ -90,4 +92,6 @@ class DateNative
 	@JNI @IOS public static function getUTCSeconds(timestamp:Float):Float{}
 	@JNI @IOS public static function toISOString(timestamp:Float, gmt:Bool):String{}
 	@JNI @IOS public static function toUTCString(timestamp:Float):String{}
+
+	@JNI public function instanceTest(d:Dynamic, s:String, b:Bool):String;
 }

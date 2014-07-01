@@ -6,7 +6,8 @@
 	<ndll name="hypsystem" if="ios"/>
 	
 	<dependency name="SystemConfiguration.framework" if="ios" />
-	<dependency name="hypsystem" path="dependencies/android" if="android" />
+	<dependency name="hypsystem" path="dependencies/hyp-system" if="android" />
+	<dependency name="joda-time" path="dependencies/joda-time" if="android" />
 
 	<android extension="hypsystem.HypSystem" />	
 </project>
