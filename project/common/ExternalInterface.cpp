@@ -23,6 +23,9 @@
 	#include <cstddef>
 	#include <hx/CFFI.h>
 	#include <jni.h>
+	#include <pthread.h>
+	#include <string>
+	#include <android/log.h>
 	#define LOG_TAG "HypSystem"
 	#define ALOG(...) __android_log_print(ANDROID_LOG_INFO,LOG_TAG,__VA_ARGS__)
 #endif
@@ -43,16 +46,29 @@ DEFINE_PRIM(hypsystem_setEventListener, 1);
 
 #ifdef ANDROID
 
+struct AutoHaxe
+{
+   int base;
+   const char *message;
+   AutoHaxe(const char *inMessage)
+   {
+      base = 0;
+      message = inMessage;
+      gc_set_top_of_stack(&base,true);
+      __android_log_print(ANDROID_LOG_VERBOSE, "hyp-system", "Enter %s %p", message, pthread_self());
+   }
+   ~AutoHaxe()
+   {
+      __android_log_print(ANDROID_LOG_VERBOSE, "hyp-system", "Leave %s %p", message, pthread_self());
+      gc_set_top_of_stack(0,true);
+   }
+};
+
 extern "C" JNIEXPORT void JNICALL Java_hypsystem_net_NetworkInfos_onUpdate(
 	JNIEnv * env, jobject obj)
 {
-	int top = 0;
-	gc_set_top_of_stack(&top,true);
-	gc_exit_blocking();
-
+	AutoHaxe haxe("Java_hypsystem_net_NetworkInfos_onUpdate");
 	val_call0(fOnEventListener->get());
-
-	gc_enter_blocking();
 }
 
 #endif
@@ -67,11 +83,8 @@ extern "C" void hypsystem_networkinterface_onUpdate()
 {
 	int top = 0;
 	gc_set_top_of_stack(&top,true);
-	gc_exit_blocking();
-
+	
 	val_call0(fOnEventListener->get());
-
-	gc_enter_blocking();	
 }
 
 static value hypsystem_networkinterface_isConnected()

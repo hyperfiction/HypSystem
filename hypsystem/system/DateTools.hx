@@ -92,6 +92,4 @@ class DateNative
 	@JNI @IOS public static function getUTCSeconds(timestamp:Float):Float{}
 	@JNI @IOS public static function toISOString(timestamp:Float, gmt:Bool):String{}
 	@JNI @IOS public static function toUTCString(timestamp:Float):String{}
-
-	@JNI public function instanceTest(d:Dynamic, s:String, b:Bool):String;
 }
