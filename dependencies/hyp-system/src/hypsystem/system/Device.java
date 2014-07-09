@@ -85,26 +85,12 @@ public class Device
 	{
 		boolean result = false;
 
-		Resources resources = HypSystem.mainContext.getResources();
-		boolean xLarge = ((resources.getConfiguration().screenLayout & 
-			Configuration.SCREENLAYOUT_SIZE_MASK) == 
-			Configuration.SCREENLAYOUT_SIZE_XLARGE);
+		Resources res = HypSystem.mainContext.getResources();
+		boolean xLarge = (res.getConfiguration().screenLayout
+            & Configuration.SCREENLAYOUT_SIZE_MASK)
+            >= Configuration.SCREENLAYOUT_SIZE_LARGE;
 
-		if (xLarge)
-		{
-			DisplayMetrics metrics = Android.getMetrics();
-
-			if (metrics.densityDpi == DisplayMetrics.DENSITY_DEFAULT
-				|| metrics.densityDpi == DisplayMetrics.DENSITY_HIGH
-				|| metrics.densityDpi == DisplayMetrics.DENSITY_MEDIUM
-				|| metrics.densityDpi == DisplayMetrics.DENSITY_TV
-				|| metrics.densityDpi == DisplayMetrics.DENSITY_XHIGH)
-			{
-				result = true;
-			}
-		}
-
-		return result;
+		return xLarge;
 	}
 
 	static Resources getRessource()
