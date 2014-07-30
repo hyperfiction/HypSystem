@@ -8,7 +8,8 @@ import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Build;
 import android.util.DisplayMetrics;
-import android.view.WindowManager;
+
+import fr.hypsystem.HypSystemExtension.R;
 
 import java.util.Locale;
 import java.util.UUID;
@@ -83,15 +84,21 @@ public class Device
 
 	static public boolean isTablet()
 	{
-		boolean result = false;
-
-		Resources res = HypSystem.mainContext.getResources();
-		boolean xLarge = (res.getConfiguration().screenLayout
-            & Configuration.SCREENLAYOUT_SIZE_MASK)
-            >= Configuration.SCREENLAYOUT_SIZE_LARGE;
-
-		return xLarge;
+		boolean deviceIsTablet = HypSystem.mainActivity.getResources().getBoolean(R.bool.isTablet);
+        return deviceIsTablet;
 	}
+
+    public static float getScreenInchesSize(double screen_size)
+    {
+        DisplayMetrics displayMetrics = Android.getMetrics();
+
+        double density = displayMetrics.density * 160;
+        double x = Math.pow(displayMetrics.widthPixels / density, 2);
+        double y = Math.pow(displayMetrics.heightPixels / density, 2);
+        double screenInches = Math.round(Math.sqrt(x + y));
+
+        return (float)screenInches;
+    }
 
 	static Resources getRessource()
 	{
