@@ -88,13 +88,6 @@ class DateTools
 	{
 		Date date = new Date((long)timestamp);
 
-		/*
-		TimeZone tz = gmt ? TimeZone.getTimeZone("GMT") : TimeZone.getDefault();
-		DateFormat df = new SimpleDateFormat(DATEFORMAT_ISO);
-		df.setTimeZone(tz);
-		String ios = df.format(date);
-		*/
-
 		DateTime dateTime = new DateTime(date);
 		String ios = dateTime.toString(DateTimeFormat.forPattern("yyyy-MM-dd'T'HH:mm:ss'Z"));
 		return ios;
