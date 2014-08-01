@@ -4,8 +4,8 @@
 	"license": "MIT",
 	"tags": ["hyperfiction","android","ios","connectivity","uuid","density"],
 	"description": "OpenFl native (Android / iOS) toolkit",
-	"version": "0.1.7",
-	"releasenote": "Better tablet android on Android (Phablets)",
+	"version": "0.1.8",
+	"releasenote": "Zulu ISO dates",
 	"contributors": ["shoebox"] ,
 	"dependencies": {
 		"inthebox-macros":""
