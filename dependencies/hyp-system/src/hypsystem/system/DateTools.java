@@ -1,5 +1,7 @@
 package hypsystem.system;
 
+import hypsystem.HypSystem;
+
 import java.lang.StringBuffer;
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -8,21 +10,22 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 import java.util.TimeZone;
-import org.joda.time.LocalTime;
-import org.joda.time.LocalDateTime;
-import org.joda.time.LocalDate;
-import hypsystem.HypSystem;
 
 import net.danlew.android.joda.JodaTimeAndroid;
+
 import org.joda.time.DateTime;
+import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 import org.joda.time.format.ISODateTimeFormat;
+import org.joda.time.LocalDate;
+import org.joda.time.LocalDateTime;
+import org.joda.time.LocalTime;
 
 class DateTools
 {
 	static final String DATEFORMAT_UTC = "yyyy-MM-dd HH:mm:ss";
 	static final String DATEFORMAT_ISO = "yyyy-MM-dd'T'HH:mm:ssZ";
-	static final SimpleDateFormat ISOFORMATTER = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssZ");
+	static final SimpleDateFormat ISOFORMATTER = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm'Z'");
 
 	public static float getTimezoneOffset()
 	{
@@ -85,11 +88,16 @@ class DateTools
 	{
 		Date date = new Date((long)timestamp);
 
-		TimeZone tz = gmt ? TimeZone.getTimeZone("UTC") : TimeZone.getDefault();
+		/*
+		TimeZone tz = gmt ? TimeZone.getTimeZone("GMT") : TimeZone.getDefault();
 		DateFormat df = new SimpleDateFormat(DATEFORMAT_ISO);
 		df.setTimeZone(tz);
-		String nowAsISO = df.format(date);
-		return nowAsISO;
+		String ios = df.format(date);
+		*/
+
+		DateTime dateTime = new DateTime(date);
+		String ios = dateTime.toString(DateTimeFormat.forPattern("yyyy-MM-dd'T'HH:mm:ss'Z"));
+		return ios;
 	}
 
 	static String toIndice(final int value)

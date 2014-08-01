@@ -723,7 +723,7 @@ static BOOL is_leap_year(NSUInteger year);
 
 - (NSString *) stringFromDate:(NSDate *)date {
 	NSTimeZone *timeZone = self.defaultTimeZone;
-	if (!timeZone) timeZone = [NSTimeZone defaultTimeZone];
+	if (!timeZone) timeZone = [NSTimeZone timeZoneWithName:@"GMT"];
 	return [self stringFromDate:date timeZone:timeZone];
 }
 

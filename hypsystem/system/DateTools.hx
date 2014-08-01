@@ -71,8 +71,6 @@ class DateTools
 		var date = Date.fromTime(t);
 		return date;
 	}
-
-
 }
 
 @:build(ShortCuts.mirrors())
