@@ -23,6 +23,9 @@ import org.joda.time.LocalTime;
 
 class DateTools
 {
+
+	static boolean jodaTimeInitialized = false;
+
 	static final String DATEFORMAT_UTC = "yyyy-MM-dd HH:mm:ss";
 	static final String DATEFORMAT_ISO = "yyyy-MM-dd'T'HH:mm:ssZ";
 	static final SimpleDateFormat ISOFORMATTER = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm'Z'");
@@ -84,8 +87,19 @@ class DateTools
 		return utc;
 	}
 
+	static void initializeJodaTime()
+	{
+		if (!jodaTimeInitialized)
+		{
+			JodaTimeAndroid.init(HypSystem.mainContext);
+			jodaTimeInitialized = true;
+		}
+	}
+
 	public static String toISOString(float timestamp, boolean gmt)
 	{
+		initializeJodaTime();
+
 		Date date = new Date((long)timestamp);
 
 		DateTime dateTime = new DateTime(date);
@@ -115,9 +129,11 @@ class DateTools
 
 		if(iso.indexOf('Z') != -1)
 		{
-			JodaTimeAndroid.init(HypSystem.mainContext);
+			initializeJodaTime();
+
 			DateTimeFormatter formatter = ISODateTimeFormat.dateTimeParser();
 			LocalDateTime result = formatter.parseLocalDateTime(iso);	
+
 			date = result.toDate();
 		}
 		else
