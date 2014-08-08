@@ -4,8 +4,8 @@
 	"license": "MIT",
 	"tags": ["hyperfiction","android","ios","connectivity","uuid","density"],
 	"description": "OpenFl native (Android / iOS) toolkit",
-	"version": "0.1.8",
-	"releasenote": "Zulu ISO dates",
+	"version": "0.1.9",
+	"releasenote": "Fix missing joda-time initialization",
 	"contributors": ["shoebox"] ,
 	"dependencies": {
 		"inthebox-macros":""
