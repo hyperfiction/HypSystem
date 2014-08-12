@@ -46,13 +46,13 @@ Basic reference
 
 >[isTablet](hypsystem/system/Device.hx#L68): Return true if the current device is a tablet.
 
-#### The [Android](hypsystem/system/platform/Android.hx) platform class (hypsystem.system.platform.Android)
+##### The [Android](hypsystem/system/platform/Android.hx) platform class (hypsystem.system.platform.Android)
 
->[getScreenBucket](): Return the screen bucket of the device. (ldpi/mdpi/hdpi/xhdpi/xxhdpi)
+>[getScreenBucket](hypsystem/system/platform/Android.hx#L11): Return the screen bucket of the device. (ldpi/mdpi/hdpi/xhdpi/xxhdpi)
 
->[dpToPx](): Convert a DP value to pixels
+>[dpToPx](hypsystem/system/platform/Android.hx#L22): Convert a DP value to pixels
 
->[getDensity](): Return the device screen density
+>[getUDID](hypsystem/system/platform/Android.hx#L35): Return the device UDID.
 
 #### The [DateTools](hypsystem/system/DateTools.hx) class (hypsystem.system.DateTools)
 Adding ISO & UTF date support to haxe by using native methods (iOS & Android)

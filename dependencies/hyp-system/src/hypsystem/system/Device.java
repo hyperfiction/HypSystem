@@ -19,6 +19,8 @@ import hypsystem.system.platform.Android;
 
 public class Device
 {
+	static String UNIQUE_ID = "::APP_PACKAGE::.unique";
+
 	public static String getName()
 	{
 		return Build.MODEL;
@@ -26,8 +28,6 @@ public class Device
 
 	public static String getUuid()
 	{
-		String UNIQUE_ID = "::APP_PACKAGE::.unique";
-
 		Activity activiy = HypSystem.mainActivity;
 
 		SharedPreferences sharedPrefs = activiy.getSharedPreferences(
@@ -45,6 +45,15 @@ public class Device
 		}
 
 		return uniqueID;
+	}
+
+	public static void resetUuid()
+	{	
+		Activity activiy = HypSystem.mainActivity;
+		SharedPreferences sharedPrefs = activiy.getSharedPreferences(
+			UNIQUE_ID, Context.MODE_PRIVATE);
+
+		sharedPrefs.edit().remove(UNIQUE_ID).commit();
 	}
 
 	public static String getLanguageCode()
