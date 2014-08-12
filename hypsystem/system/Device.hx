@@ -21,9 +21,7 @@ class Device
 	
 	@return the uuid
 	*/
-	@JNI
-	@IOS
-	public static function getUuid():String
+	@JNI @IOS public static function getUuid():String
 	{
 		var result:String = null;
 		var so = SharedObject.getLocal("hypsystem-device");

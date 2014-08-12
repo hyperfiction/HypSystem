@@ -1,6 +1,8 @@
 package hypsystem.system.platform;
 
 import android.app.Activity;
+import android.os.Build;
+import android.provider.Settings;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
 import android.view.Display;
@@ -9,8 +11,28 @@ import android.view.WindowManager;
 import hypsystem.HypSystem;
 import hypsystem.system.Device;
 
+import java.util.UUID;
+
 public class Android
 {
+	public static String getUDID()
+	{
+		String androidId = "" +Settings.Secure.getString(
+			HypSystem.mainContext.getContentResolver(), 
+			Settings.Secure.ANDROID_ID);
+
+		String serial = Build.SERIAL;
+
+		androidId +=  serial;
+
+		byte[] b = androidId.getBytes();
+
+		UUID deviceUuid = UUID.nameUUIDFromBytes(b);
+		
+		String uniqueId = deviceUuid.toString();
+		return uniqueId;
+	}
+
 	public static DisplayMetrics getMetrics()
 	{
 		Activity mainActivity = HypSystem.mainActivity;

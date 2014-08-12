@@ -14,4 +14,9 @@ class Android
 	{
 		return dp;
 	}
+
+	@JNI public static function getUDID():String
+	{
+		return "";
+	}
 }
