@@ -58,7 +58,7 @@ public class Device
 
 	public static String getLanguageCode()
 	{
-		return Locale.getDefault().getLanguage();
+		return Locale.getDefault().toString().replace('_','-');
 	}
 
 	public static String getSystemVersion()
