@@ -9,6 +9,8 @@ extern "C"
 
 @interface NetworkInfos:NSObject
 
+@property (retain, nonatomic)  Reachability* reach;
+
 +(NetworkInfos *) getInstance;
 
 -(bool)isConnected;
@@ -18,6 +20,8 @@ extern "C"
 @end
 
 @implementation NetworkInfos
+
+@synthesize reach;
 
 +(NetworkInfos *)getInstance
 {
@@ -36,15 +40,14 @@ extern "C"
 {
 	if( self == [super init])
 	{
-		
+		self.reach = [Reachability reachabilityForInternetConnection]; //retain reach	
 	}
 	return self;
 }
 
 -(NetworkStatus)getStatus
 {
-	Reachability *reachability = [Reachability reachabilityForInternetConnection];   
-	NetworkStatus networkStatus = [reachability currentReachabilityStatus];  
+	NetworkStatus networkStatus = [self.reach currentReachabilityStatus];  
 	return networkStatus;
 }
 
@@ -56,22 +59,20 @@ extern "C"
 
 -(bool)isWifi
 {
-	NSLog(@"isWifi");
 	NetworkStatus networkStatus = [self getStatus];
 	return networkStatus == ReachableViaWiFi;
 }
 
 -(void)listen
 {
-	NSLog(@"listen");
 	[[NSNotificationCenter defaultCenter] addObserver:self
 		selector:@selector(statusUpdated:) name:kReachabilityChangedNotification 
 		object:nil];
+	[self.reach startNotifier];
 }
 
 -(void)statusUpdated:(NSNotification*)notification
 {	
-	NSLog(@"statusUpdated");
 	hypsystem_networkinterface_onUpdate();
 }
 

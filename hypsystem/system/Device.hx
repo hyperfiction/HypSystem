@@ -1,6 +1,6 @@
 package hypsystem.system;
 
-#if flash
+#if(!android && !ios)
 import haxe.crypto.Md5;
 import flash.net.SharedObject;
 #end
