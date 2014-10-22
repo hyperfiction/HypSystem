@@ -1,6 +1,6 @@
 package hypsystem.system;
 
-#if flash
+#if !(android || ios)
 import haxe.crypto.Md5;
 import flash.net.SharedObject;
 #end
@@ -54,11 +54,7 @@ class Device
 	@IOS("hyp-system","hypsystem_device_getLangCode")
 	public static function getLanguageCode():String
 	{
-		#if flash
 		return flash.system.Capabilities.language;
-		#else
-		return "unknow";
-		#end
 	}
 
 	@JNI
