@@ -4,8 +4,8 @@
 	"license": "MIT",
 	"tags": ["hyperfiction","android","ios","connectivity","uuid","density"],
 	"description": "OpenFl native (Android / iOS) toolkit",
-	"version": "0.2.0",
-	"releasenote": "Get Android device UDID",
+	"version": "0.2.1",
+	"releasenote": "Fix iOS reachability change listenerD",
 	"contributors": ["shoebox"] ,
 	"dependencies": {
 		"inthebox-macros":""
