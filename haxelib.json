@@ -4,8 +4,8 @@
 	"license": "MIT",
 	"tags": ["hyperfiction","android","ios","connectivity","uuid","density"],
 	"description": "OpenFl native (Android / iOS) toolkit",
-	"version": "0.1.9",
-	"releasenote": "Fix missing joda-time initialization",
+	"version": "0.2.1",
+	"releasenote": "Fix iOS reachability change listener",
 	"contributors": ["shoebox"] ,
 	"dependencies": {
 		"inthebox-macros":""
