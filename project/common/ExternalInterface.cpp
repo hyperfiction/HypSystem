@@ -81,7 +81,6 @@ extern "C" JNIEXPORT void JNICALL Java_hypsystem_net_NetworkInfos_onUpdate(
 
 extern "C" void hypsystem_networkinterface_onUpdate()
 {
-	printf("hypsystem_networkinterface_onUpdate\n");
 	int top = 0;
 	gc_set_top_of_stack(&top,true);
 	
