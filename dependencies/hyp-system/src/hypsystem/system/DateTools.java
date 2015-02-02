@@ -20,6 +20,7 @@ import org.joda.time.format.ISODateTimeFormat;
 import org.joda.time.LocalDate;
 import org.joda.time.LocalDateTime;
 import org.joda.time.LocalTime;
+import org.joda.time.DateTimeZone;
 
 class DateTools
 {
@@ -96,13 +97,14 @@ class DateTools
 		}
 	}
 
-	public static String toISOString(float timestamp, boolean gmt)
+	public static String toISOString(float timestamp, boolean utc)
 	{
 		initializeJodaTime();
 
 		Date date = new Date((long)timestamp);
 
 		DateTime dateTime = new DateTime(date);
+		if (utc) dateTime = dateTime.withZone(DateTimeZone.UTC);
 		String ios = dateTime.toString(DateTimeFormat.forPattern("yyyy-MM-dd'T'HH:mm:ss'Z"));
 		return ios;
 	}
