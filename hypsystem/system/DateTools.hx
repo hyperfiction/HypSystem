@@ -58,9 +58,9 @@ class DateTools
 		return DateNative.toUTCString(getDateTime(date));
 	}
 
-	public static function toISOString(date:Date, ?gmt:Bool):String
+	public static function toISOString(date:Date, ?utc:Bool):String
 	{
-		return DateNative.toISOString(getDateTime(date), gmt);
+		return DateNative.toISOString(getDateTime(date), utc);
 	}
 
 	public static function fromISO(s:String):Date
