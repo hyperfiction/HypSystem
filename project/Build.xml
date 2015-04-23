@@ -25,15 +25,17 @@
 		<file name="iPhone/ISO8601DateFormatter.m"/>		
 	</files>
 	
+	<set name="LIBNAME" value="hypsystem"/>
 	<set name="SLIBEXT" value=".lib" if="windows"/>
 	<set name="SLIBEXT" value=".a" unless="windows"/>
 	<set name="SLIBEXT" value=".so" if="webos"/>
-	
-	<target id="NDLL" output="${LIBPREFIX}hypsystem${MSVC_LIB_VERSION}${DEBUGEXTRA}${LIBEXTRA}" tool="linker" toolid="${STD_MODULE_LINK}">
+	<set name="DEBUGEXTRA" value="-debug" if="fulldebug" />
+
+	<target id="NDLL" output="${LIBPREFIX}${LIBNAME}${MSVC_LIB_VERSION}${DEBUGEXTRA}${LIBEXTRA}" 
+		tool="linker" toolid="${STD_MODULE_LINK}">
+		<compilerflag value="-DDEBUG" if="debug"/>
 		<outdir name="../ndll/${BINDIR}"/>
-
 		<ext value=".ndll" if="windows || mac || linux"/>
-
 		<files id="common"/>
 		<files id="android" if="android"/>
 		<files id="iphone" if="iphone"/>
