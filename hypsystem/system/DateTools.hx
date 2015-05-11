@@ -78,16 +78,16 @@ class DateTools
 @CPP_PRIMITIVE_PREFIX("hypsystem_datetools")
 class DateNative
 {
-	@JNI @IOS public static function fromISO(s:String):Float{}
-	@JNI @IOS public static function getTimezoneOffset():Float{}
-	@JNI @IOS public static function getUTCDate(timestamp:Float):Float{}
-	@JNI @IOS public static function getUTCDay(timestamp:Float):Float{}
-	@JNI @IOS public static function getUTCFullYear(timestamp:Float):Float{}
-	@JNI @IOS public static function getUTCHours(timestamp:Float):Float{}
-	@JNI @IOS public static function getUTCMilliseconds(timestamp:Float):Float{}
-	@JNI @IOS public static function getUTCMinutes(timestamp:Float):Float{}
-	@JNI @IOS public static function getUTCMonth(timestamp:Float):Float{}
-	@JNI @IOS public static function getUTCSeconds(timestamp:Float):Float{}
-	@JNI @IOS public static function toISOString(timestamp:Float, gmt:Bool):String{}
-	@JNI @IOS public static function toUTCString(timestamp:Float):String{}
+	@JNI @IOS public static function fromISO(s:String):Float;
+	@JNI @IOS public static function getTimezoneOffset():Float;
+	@JNI @IOS public static function getUTCDate(timestamp:Float):Float;
+	@JNI @IOS public static function getUTCDay(timestamp:Float):Float;
+	@JNI @IOS public static function getUTCFullYear(timestamp:Float):Float;
+	@JNI @IOS public static function getUTCHours(timestamp:Float):Float;
+	@JNI @IOS public static function getUTCMilliseconds(timestamp:Float):Float;
+	@JNI @IOS public static function getUTCMinutes(timestamp:Float):Float;
+	@JNI @IOS public static function getUTCMonth(timestamp:Float):Float;
+	@JNI @IOS public static function getUTCSeconds(timestamp:Float):Float;
+	@JNI @IOS public static function toISOString(timestamp:Float, gmt:Bool):String;
+	@JNI @IOS public static function toUTCString(timestamp:Float):String;
 }
