@@ -90,4 +90,13 @@ public class Android
 		return metrics.density;
 	}
 
+	public static boolean isFirebaseTestLab()
+	{
+		String testLabSetting = Settings.System.getString(HypSystem.mainContext.getContentResolver(), "firebase.test.lab");
+		if ("true".equals(testLabSetting)) {
+			return true;
+		}
+		return false;
+	}
+
 }

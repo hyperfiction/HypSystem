@@ -54,6 +54,8 @@ Basic reference
 
 >[getUDID](hypsystem/system/platform/Android.hx#L35): Return the device UDID.
 
+>[isFirebaseTestLab](hypsystem/system/platform/Android.hx#L46): Return if device is currently in the Pre-Launch test lab.
+
 #### The [DateTools](hypsystem/system/DateTools.hx) class (hypsystem.system.DateTools)
 Adding ISO & UTF date support to haxe by using native methods (iOS & Android)
 
