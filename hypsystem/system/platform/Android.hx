@@ -36,4 +36,15 @@ class Android
 	{
 		return "";
 	}
+
+	/**
+	Find out if device is currently in the Pre-Launch test lab
+	https://firebase.google.com/docs/test-lab/android-studio
+
+	@return True or false (Bool)
+	**/
+	@JNI public static function isFirebaseTestLab():Bool
+	{
+		return false;
+	}
 }

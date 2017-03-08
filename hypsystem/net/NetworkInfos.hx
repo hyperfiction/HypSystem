@@ -48,6 +48,7 @@ class NetworkInfos
 				ConnectionType.MOBILE;
 
 			case _:
+				ConnectionType.NONE;
 		}
 
 		return res;
